@@ -1,0 +1,699 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="procedures_defnoreturn" id="mGnRmW~V-!k}-NavF+64" x="-436" y="-437">
+    <field name="NAME">debugInit</field>
+    <statement name="STACK">
+      <block type="component_method" id="^{d/LLXHcpCUFPx,X-bB">
+        <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="DB"></mutation>
+        <field name="COMPONENT_SELECTOR">DB</field>
+        <value name="ARG0">
+          <block type="text" id="f8|DATbO$BG{H@2_K}BD">
+            <field name="TEXT">TAG</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="lists_create_with" id="Ulg^-#Zurm8TBLe]`6.Z">
+            <mutation items="13"></mutation>
+            <value name="ADD0">
+              <block type="text" id="?RdcxZ:(DRPZjO3O8H$~">
+                <field name="TEXT">卷子</field>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="text" id="LTP3TP/5O6%Cj.gq_R_c">
+                <field name="TEXT">学探诊</field>
+              </block>
+            </value>
+            <value name="ADD2">
+              <block type="text" id="vni]0#U+z%Q_{]Dcy6pH">
+                <field name="TEXT">练习册</field>
+              </block>
+            </value>
+            <value name="ADD3">
+              <block type="text" id="{o)TEc1%EVw~ibHF_ed4">
+                <field name="TEXT">课本</field>
+              </block>
+            </value>
+            <value name="ADD4">
+              <block type="text" id="Uu=YAfn/|c@f!4a8-ZTc">
+                <field name="TEXT">改错</field>
+              </block>
+            </value>
+            <value name="ADD5">
+              <block type="text" id="l$9EBH?O.k8#A198S$QU">
+                <field name="TEXT">页</field>
+              </block>
+            </value>
+            <value name="ADD6">
+              <block type="text" id="yO#o3Du7oYQmdi:7G@vb">
+                <field name="TEXT">题</field>
+              </block>
+            </value>
+            <value name="ADD7">
+              <block type="text" id="jes)Sk#@wQ1OUdX*]J8C">
+                <field name="TEXT">课</field>
+              </block>
+            </value>
+            <value name="ADD8">
+              <block type="text" id="qa+u_=f,Lq[[n|s}eOv_">
+                <field name="TEXT">章</field>
+              </block>
+            </value>
+            <value name="ADD9">
+              <block type="text" id="_,]jE:jP1/e,7$O%=gmn">
+                <field name="TEXT">节</field>
+              </block>
+            </value>
+            <value name="ADD10">
+              <block type="text" id="vYD^+8k^QO_^{v%94m4b">
+                <field name="TEXT">阅读</field>
+              </block>
+            </value>
+            <value name="ADD11">
+              <block type="text" id="yhKpYoPhm::OS*Gc{c%M">
+                <field name="TEXT">小说</field>
+              </block>
+            </value>
+            <value name="ADD12">
+              <block type="text" id=":Ne6SnRqGN`Vz/F1]1]3">
+                <field name="TEXT">完成</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="component_method" id="#,tFm1iS:.l2^zZ)%`-c">
+            <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="DB"></mutation>
+            <field name="COMPONENT_SELECTOR">DB</field>
+            <value name="ARG0">
+              <block type="text" id="+Qr$0S=T){TKLRf8m)~*">
+                <field name="TEXT">DATE</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="lists_create_with" id="7t{oaWqC@/JosUS}P}83">
+                <mutation items="2"></mutation>
+                <value name="ADD0">
+                  <block type="text" id="cihq[(/Hft~x[!s;iub#">
+                    <field name="TEXT">20171126</field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="text" id="4LE:2bUBkLPug:Lh@=4M">
+                    <field name="TEXT">20171127</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="component_method" id="_(y~LSOj}9c+Z,iNRmC/">
+                <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="DB"></mutation>
+                <field name="COMPONENT_SELECTOR">DB</field>
+                <value name="ARG0">
+                  <block type="text" id="QB!CPjlKi?zSf,bZYhwa">
+                    <field name="TEXT">SUB</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="lists_create_with" id="V-+7jx%s2,EuxMEVC2]0">
+                    <mutation items="8"></mutation>
+                    <value name="ADD0">
+                      <block type="text" id="jk?TRL|jE;hbefjg8;h6">
+                        <field name="TEXT">其它</field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="text" id="L_?-8usokApzEZ2F,bUS">
+                        <field name="TEXT">语文</field>
+                      </block>
+                    </value>
+                    <value name="ADD2">
+                      <block type="text" id="LS?-{`2lt?e$?-Kz}_Vl">
+                        <field name="TEXT">数学</field>
+                      </block>
+                    </value>
+                    <value name="ADD3">
+                      <block type="text" id="2iM9B.YVo#_`ztF3iAGB">
+                        <field name="TEXT">英语</field>
+                      </block>
+                    </value>
+                    <value name="ADD4">
+                      <block type="text" id="r5p{{Qn;+owsZK#d1uG8">
+                        <field name="TEXT">物理</field>
+                      </block>
+                    </value>
+                    <value name="ADD5">
+                      <block type="text" id="Z,d9sE4HTPh(=,3B}[4U">
+                        <field name="TEXT">化学</field>
+                      </block>
+                    </value>
+                    <value name="ADD6">
+                      <block type="text" id="[*qKwohroH@F-H(=$0pl">
+                        <field name="TEXT">生物</field>
+                      </block>
+                    </value>
+                    <value name="ADD7">
+                      <block type="text" id="5OkmT/ApXVrF@G@;;pVc">
+                        <field name="TEXT">政治</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_method" id="{=VFlDxkR[Cb]vN2~zRi">
+                    <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="DB"></mutation>
+                    <field name="COMPONENT_SELECTOR">DB</field>
+                    <value name="ARG0">
+                      <block type="text" id="6b!ZvWqVU0sAfg(7I6e^">
+                        <field name="TEXT">VL_20171126</field>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block type="lists_create_with" id="aQW/{(Q,$0I8Bo??u9{K">
+                        <mutation items="8"></mutation>
+                        <value name="ADD0">
+                          <block type="lists_create_with" id="RQWqEj:=~tW7]Zi;q!Bj">
+                            <mutation items="1"></mutation>
+                            <value name="ADD0">
+                              <block type="lists_create_with" id="WM[Lf@KlVz:xV|je|x`%">
+                                <mutation items="2"></mutation>
+                                <value name="ADD0">
+                                  <block type="text" id="~%NG^cfJtsHa[3WF[D.R">
+                                    <field name="TEXT">准备值周</field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block type="logic_boolean" id="]nVDq?laGvGcWqm~nL|N">
+                                    <field name="BOOL">FALSE</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="lists_create_with" id="Y/S}1Dv__%UfBP_UZGxH">
+                            <mutation items="3"></mutation>
+                            <value name="ADD0">
+                              <block type="lists_create_with" id="3A2BOc{4[y-Bf0ee5Fho">
+                                <mutation items="2"></mutation>
+                                <value name="ADD0">
+                                  <block type="text" id="kL3#DjGFtltzy3dQ1j#Y">
+                                    <field name="TEXT">大作文</field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block type="logic_false" id="w}bcFX{;u?HxiZJfj)3*">
+                                    <field name="BOOL">TRUE</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="lists_create_with" id="?SP7p})HIS%,NG?Cv@#G">
+                                <mutation items="2"></mutation>
+                                <value name="ADD0">
+                                  <block type="text" id="bk}v8s.QZ?NVbUjk]^7m">
+                                    <field name="TEXT">小作文</field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block type="logic_boolean" id="r+%dRm9k~:`DZ(Vwy;PK">
+                                    <field name="BOOL">TRUE</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ADD2">
+                              <block type="lists_create_with" id="mXQl7haKjPg@WpWh^*-$">
+                                <mutation items="2"></mutation>
+                                <value name="ADD0">
+                                  <block type="text" id="b%%hDNsLe/.h1-?xrM|D">
+                                    <field name="TEXT">背古诗</field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block type="logic_false" id="+WT]MrIV{lR+cea!~8KV">
+                                    <field name="BOOL">FALSE</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ADD2">
+                          <block type="lists_create_with" id=",#zj;}[.F~ibw;tB=eqT">
+                            <mutation items="2"></mutation>
+                            <value name="ADD0">
+                              <block type="lists_create_with" id="Er[:+e[0MO,tb6QDrQcl">
+                                <mutation items="2"></mutation>
+                                <value name="ADD0">
+                                  <block type="text" id="T`|c4~t;041[q{M*w-;_">
+                                    <field name="TEXT">单词卷子</field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block type="logic_false" id="nJ57CO4eo?d:Yr#?UXkD">
+                                    <field name="BOOL">FALSE</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="lists_create_with" id="is~L-?XC0~Mnb)PqcfXE">
+                                <mutation items="2"></mutation>
+                                <value name="ADD0">
+                                  <block type="text" id="@9F6uwMS%:jd^(C1[?FC">
+                                    <field name="TEXT">小说</field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block type="logic_false" id="}=?hr0{33yhiY7j,ID5a">
+                                    <field name="BOOL">FALSE</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ADD3">
+                          <block type="lists_create_with" id="#C5@w|x5%O3J###CxK`(">
+                            <mutation items="1"></mutation>
+                            <value name="ADD0">
+                              <block type="lists_create_with" id="IBKM*GLL5Jt8,Ed-ZlHa">
+                                <mutation items="2"></mutation>
+                                <value name="ADD0">
+                                  <block type="text" id="k72?MK@Yp-AMW9qBvPc(">
+                                    <field name="TEXT">卷子</field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block type="logic_boolean" id="(U$GLe[?r=K*pPhCv!e8">
+                                    <field name="BOOL">TRUE</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ADD4">
+                          <block type="lists_create_with" id="}dKE6`#2ce/=kD}%X)Nc">
+                            <mutation items="1"></mutation>
+                            <value name="ADD0">
+                              <block type="lists_create_with" id="2HB/G2bm$XXD%/i;Aoa:">
+                                <mutation items="2"></mutation>
+                                <value name="ADD0">
+                                  <block type="text" id="u|Iqzj71`m;%XM:c^Jiq">
+                                    <field name="TEXT">卷子</field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block type="logic_false" id="x,oI=Xs*l%eXToE1QGvs">
+                                    <field name="BOOL">FALSE</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ADD5">
+                          <block type="lists_create_with" id="I4`7Yy*/l=o6#}g2c;-?">
+                            <mutation items="1"></mutation>
+                            <value name="ADD0">
+                              <block type="lists_create_with" id="{_o8JHkx2hCiKyf^oDT9">
+                                <mutation items="2"></mutation>
+                                <value name="ADD0">
+                                  <block type="text" id="By1a0s(rB(d2d(6Fv!6b">
+                                    <field name="TEXT">学探诊 前三页</field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block type="logic_false" id="F;mnwcg_0ysyQVcS6Q)y">
+                                    <field name="BOOL">FALSE</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ADD6">
+                          <block type="lists_create_with" id="Kp6z9UIlYB/*:yElL?Rv">
+                            <mutation items="1"></mutation>
+                            <value name="ADD0">
+                              <block type="lists_create_with" id="a|e$XlVEAk#zC~fBudxE">
+                                <mutation items="2"></mutation>
+                                <value name="ADD0">
+                                  <block type="text" id="6$9m}Dfas%xKCE]G]6J8">
+                                    <field name="TEXT">练习册 完成</field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block type="logic_false" id="`*(Ji{STNn}~y316Y_0r">
+                                    <field name="BOOL">TRUE</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ADD7">
+                          <block type="lists_create_with" id="b7Ml2%btN2Xq~Zk%24Sl">
+                            <mutation items="1"></mutation>
+                            <value name="ADD0">
+                              <block type="lists_create_with" id="H.*f]fx*Sfsa:+~ngr*|">
+                                <mutation items="0"></mutation>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_method" id="|SLEkqRPeXc,{7/!+*W(">
+                        <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="DB"></mutation>
+                        <field name="COMPONENT_SELECTOR">DB</field>
+                        <value name="ARG0">
+                          <block type="text" id="9$rz?CZI)_Si#_LuYx9n">
+                            <field name="TEXT">VL_20171127</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block type="lists_create_with" id="Py1e`C~.q[}(r,WQrebl">
+                            <mutation items="8"></mutation>
+                            <value name="ADD0">
+                              <block type="lists_create_with" id="aCH9}El-$b)hw~#KE}.L">
+                                <mutation items="1"></mutation>
+                                <value name="ADD0">
+                                  <block type="lists_create_with" id="Kt3yAurE)_*^fR9Q[w0g">
+                                    <mutation items="0"></mutation>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block type="lists_create_with" id="y)TFM@mCE(y?:ky%x61S">
+                                <mutation items="1"></mutation>
+                                <value name="ADD0">
+                                  <block type="lists_create_with" id="R*@{hr%#-_bRtx}rDfRB">
+                                    <mutation items="2"></mutation>
+                                    <value name="ADD0">
+                                      <block type="text" id="=)8d/gf,dIM.-z`EUyM#">
+                                        <field name="TEXT">摘抄</field>
+                                      </block>
+                                    </value>
+                                    <value name="ADD1">
+                                      <block type="logic_boolean" id="(M,vCdo*DS}NQgMp!HVK">
+                                        <field name="BOOL">TRUE</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ADD2">
+                              <block type="lists_create_with" id=")f/Ws]1][-iyqRP[yc2Q">
+                                <mutation items="1"></mutation>
+                                <value name="ADD0">
+                                  <block type="lists_create_with" id="bRsT/~bI#lylp3A+*q)$">
+                                    <mutation items="2"></mutation>
+                                    <value name="ADD0">
+                                      <block type="text" id="?xQACv[}E4;fKTh{tUOu">
+                                        <field name="TEXT">卷子</field>
+                                      </block>
+                                    </value>
+                                    <value name="ADD1">
+                                      <block type="logic_false" id="T(jUe1yWAM/IrN+W=ukl">
+                                        <field name="BOOL">FALSE</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ADD3">
+                              <block type="lists_create_with" id="Wt]y3|SvGh)oKjEqy/3Y">
+                                <mutation items="1"></mutation>
+                                <value name="ADD0">
+                                  <block type="lists_create_with" id="Zufz;LMwGJVLKguTnEhW">
+                                    <mutation items="2"></mutation>
+                                    <value name="ADD0">
+                                      <block type="text" id="*O2:}W}J(=XKt(m+l`%(">
+                                        <field name="TEXT">练习册第四讲</field>
+                                      </block>
+                                    </value>
+                                    <value name="ADD1">
+                                      <block type="logic_false" id="(,(`fW+TP)Pz[f^:TB_l">
+                                        <field name="BOOL">FALSE</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ADD4">
+                              <block type="lists_create_with" id="8:i)fO|)]ei!?GNywIE#">
+                                <mutation items="2"></mutation>
+                                <value name="ADD0">
+                                  <block type="lists_create_with" id="VP(|z#Gb|UNMVPA1@#$i">
+                                    <mutation items="2"></mutation>
+                                    <value name="ADD0">
+                                      <block type="text" id="v}q4/)9*gySCzaOuB.u#">
+                                        <field name="TEXT">改错</field>
+                                      </block>
+                                    </value>
+                                    <value name="ADD1">
+                                      <block type="logic_false" id="0:|=QKf29%7$g]^+)u~|">
+                                        <field name="BOOL">FALSE</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block type="lists_create_with" id="Ks#7`oCQ#}5}U?|OZ51B">
+                                    <mutation items="2"></mutation>
+                                    <value name="ADD0">
+                                      <block type="text" id="VfG-X$=;9VT}UV~BI@{X">
+                                        <field name="TEXT">练习册2.10章</field>
+                                      </block>
+                                    </value>
+                                    <value name="ADD1">
+                                      <block type="logic_false" id="a^N7INjRjNx_[+B}l})Z">
+                                        <field name="BOOL">FALSE</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ADD5">
+                              <block type="lists_create_with" id="_`iHN]qW?0;k=J3t^@n[">
+                                <mutation items="1"></mutation>
+                                <value name="ADD0">
+                                  <block type="lists_create_with" id="a5O-An162=(EPRkxEPd7">
+                                    <mutation items="2"></mutation>
+                                    <value name="ADD0">
+                                      <block type="text" id="+@{)oa:UE2u(D2Hh5,%T">
+                                        <field name="TEXT">练习册水解</field>
+                                      </block>
+                                    </value>
+                                    <value name="ADD1">
+                                      <block type="logic_false" id="`V,^DyB=hZ`d*gN7![gt">
+                                        <field name="BOOL">FALSE</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ADD6">
+                              <block type="lists_create_with" id=".1g8T7d0PiCg~fVlT,wh">
+                                <mutation items="1"></mutation>
+                                <value name="ADD0">
+                                  <block type="lists_create_with" id=")9giH{afCwr6]ajty[wf">
+                                    <mutation items="0"></mutation>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ADD7">
+                              <block type="lists_create_with" id="e8BRh[OQ;U::*mcuCbTD">
+                                <mutation items="1"></mutation>
+                                <value name="ADD0">
+                                  <block type="lists_create_with" id="wDEn-@bn|PlvuHbMHu18">
+                                    <mutation items="2"></mutation>
+                                    <value name="ADD0">
+                                      <block type="text" id="i[Pm]3gI52y[qagLk%VD">
+                                        <field name="TEXT">练习册 第三章</field>
+                                      </block>
+                                    </value>
+                                    <value name="ADD1">
+                                      <block type="logic_false" id="BG3()ZTj/@IM?/R-jI(E">
+                                        <field name="BOOL">FALSE</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="o)ZbvQ8{_j|2T^_|3]wz" x="-1034" y="132">
+    <mutation component_type="Form" instance_name="Screen1" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">Screen1</field>
+    <statement name="DO">
+      <block type="controls_if" id="Xp:W1},-lbBv+XSY/]@z">
+        <value name="IF0">
+          <block type="component_method" id="~wwebU+h^{bjobI/9/?+">
+            <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="DB"></mutation>
+            <field name="COMPONENT_SELECTOR">DB</field>
+            <value name="ARG0">
+              <block type="text" id="U)zydxyz@YyMD=dryx8t">
+                <field name="TEXT">ISFIRSTRUN</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="logic_boolean" id="5R^X*h5?A0]*-!vVLgd1">
+                <field name="BOOL">TRUE</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_method" id="D2_)~v0^^(SR$%#2ugb4">
+            <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="DB"></mutation>
+            <field name="COMPONENT_SELECTOR">DB</field>
+            <value name="ARG0">
+              <block type="text" id=",dc;uc:;]Ca;8$90jV@b">
+                <field name="TEXT">ISFIRSTRUN</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="logic_boolean" id="|vEph{6}UB=]DQYN55Fo">
+                <field name="BOOL">FALSE</field>
+              </block>
+            </value>
+            <next>
+              <block type="procedures_callnoreturn" id="RYb=w5eVUiIfZ~4/dR$X" inline="false">
+                <mutation name="debugInit"></mutation>
+                <field name="PROCNAME">debugInit</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_openAnotherScreen" id="cf3=09X=EQ{0ge{gO0i+">
+            <value name="SCREEN">
+              <block type="text" id="pxV1i(lTZO,DN1Gq{eco">
+                <field name="TEXT">Today</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="Ulj?P@-yONUw|mxWj).U" x="-1034" y="424">
+    <mutation component_type="Form" instance_name="Screen1" event_name="OtherScreenClosed"></mutation>
+    <field name="COMPONENT_SELECTOR">Screen1</field>
+    <statement name="DO">
+      <block type="controls_if" id="Pnxfy~3K=|:OOzaG;lbS">
+        <mutation elseif="2" else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="C;$5}gvt|M9]Cw#s%JgT">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="lexical_variable_get" id="E2*-@IvyHZp//*RDqu1w">
+                <mutation>
+                  <eventparam name="result"></eventparam>
+                </mutation>
+                <field name="VAR">result</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="H6QTt}Ryw~J[ED-y5{;c">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_openAnotherScreen" id="_MA+7ea7/`w,3(6AiWU-">
+            <value name="SCREEN">
+              <block type="text" id=":gZ`fj~k;Wy8d|*G*^u#">
+                <field name="TEXT">Today</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <value name="IF1">
+          <block type="logic_compare" id="_qMjg$C^?p3zA~ldQq^/">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="lexical_variable_get" id="#ny?cTJV(tUt)X=kNrk8">
+                <mutation>
+                  <eventparam name="result"></eventparam>
+                </mutation>
+                <field name="VAR">result</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="-$A^ZL|*yB-6TTAXN/95">
+                <field name="NUM">2</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="controls_openAnotherScreen" id="K6zk#,X(x0l~Lc|Qu:o5">
+            <value name="SCREEN">
+              <block type="text" id="NRGwOe=?5,F@HFR+bMg%">
+                <field name="TEXT">History</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <value name="IF2">
+          <block type="logic_compare" id="^)Uf(xnKO5Cin36zl6Y9">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="lexical_variable_get" id="kjFlfqP8^QKfauPAe7:6">
+                <mutation>
+                  <eventparam name="result"></eventparam>
+                </mutation>
+                <field name="VAR">result</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="mI$oUfNK[eBN.iYOK!v.">
+                <field name="NUM">3</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO2">
+          <block type="controls_openAnotherScreen" id="DA[rA=^)34/%%}ABJSh*">
+            <value name="SCREEN">
+              <block type="text" id="-YG-`$0sVz@JY9Uc5S]f">
+                <field name="TEXT">More</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="controls_closeApplication" id="Q03D8~f]w|%lyW7ZE`n!"></block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="159" language-version="20"></yacodeblocks>
+</xml>

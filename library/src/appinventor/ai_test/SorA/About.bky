@@ -1,0 +1,421 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="JvRx~o34O^tuQ3}6rC7M" x="-405" y="-121">
+    <mutation component_type="Form" instance_name="About" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">About</field>
+    <statement name="DO">
+      <block type="component_set_get" id="@2-0uqXutt)nC)tg01}e">
+        <mutation component_type="Form" set_or_get="set" property_name="BackgroundColor" is_generic="false" instance_name="About"></mutation>
+        <field name="COMPONENT_SELECTOR">About</field>
+        <field name="PROP">BackgroundColor</field>
+        <value name="VALUE">
+          <block type="color_make_color" id="X.FBU!,|M?Ob-s:%kp0}">
+            <value name="COLORLIST">
+              <block type="lists_create_with" id="?NMO%EezT^J]a.dxu|Fy" inline="false">
+                <mutation items="3"></mutation>
+                <value name="ADD0">
+                  <block type="math_number" id="@af:!E?-fCyOYi%S:M!|">
+                    <field name="NUM">227</field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="math_number" id="7)-X3!(~~!U;WWpfOM/T">
+                    <field name="NUM">227</field>
+                  </block>
+                </value>
+                <value name="ADD2">
+                  <block type="math_number" id="e+r%CV};B-e=#li[f{-1">
+                    <field name="NUM">227</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if" id="!IzW.51Ioib}qtq.duha">
+            <mutation elseif="4"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="S=oc;O4,mx2suo@@)osj">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="controls_getStartValue" id="#itU]ZE-uh+b4.y{Uetr"></block>
+                </value>
+                <value name="B">
+                  <block type="text" id="H5*wZSuV01M=kjucHH{G">
+                    <field name="TEXT">author</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="component_set_get" id="#8-yHp+mzPw3QO-YKy1-">
+                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="lbTitle"></mutation>
+                <field name="COMPONENT_SELECTOR">lbTitle</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="text" id="obT=asai-QgKq1C*+)g*">
+                    <field name="TEXT">关于作者</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="|QT0MGrnKvm$0*YVjMlA">
+                    <mutation component_type="Image" set_or_get="set" property_name="Picture" is_generic="false" instance_name="imgTop"></mutation>
+                    <field name="COMPONENT_SELECTOR">imgTop</field>
+                    <field name="PROP">Picture</field>
+                    <value name="VALUE">
+                      <block type="text" id="/@HTK(A-EtUwd]wjq3L1">
+                        <field name="TEXT">Name.png</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="2Sg9eOLl5-p!S72Bo}{z">
+                        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="lbTop"></mutation>
+                        <field name="COMPONENT_SELECTOR">lbTop</field>
+                        <field name="PROP">Text</field>
+                        <value name="VALUE">
+                          <block type="text" id="K`,}Q,]!Nb@N5)|t:/F1">
+                            <field name="TEXT">谷雨同学制作\nApp Inventor 2 技术支持\n特别鸣谢 文佳妮</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" id="k/Df3kN(gyt03|e+O)z=">
+                            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="lbMain"></mutation>
+                            <field name="COMPONENT_SELECTOR">lbMain</field>
+                            <field name="PROP">Text</field>
+                            <value name="VALUE">
+                              <block type="text" id="x*$JjLs5SD8jJJ#QfB+.">
+                                <field name="TEXT">本地服务器版本：App Inventor 2 Ultimate\n图标来源：IconFont\n图像编辑：Adobe Photoshop CC 2017\nPC端调试模拟：BlueStack蓝叠中国</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="IF1">
+              <block type="logic_compare" id="5z#Md`WXusI.K8,[_34Z">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="controls_getStartValue" id="6U.v]8*A5E|iPxC.6^q("></block>
+                </value>
+                <value name="B">
+                  <block type="text" id="uF],C%reX{@}v!L+jbH@">
+                    <field name="TEXT">app</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO1">
+              <block type="component_set_get" id="tOVKB/24GSZp`/htslyU">
+                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="lbTitle"></mutation>
+                <field name="COMPONENT_SELECTOR">lbTitle</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="text" id="}Z4{*6a5vDWFiBMtMg0w">
+                    <field name="TEXT">关于应用</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id=".,UUpmq2xr_*|}Md_*[G">
+                    <mutation component_type="Image" set_or_get="set" property_name="Picture" is_generic="false" instance_name="imgTop"></mutation>
+                    <field name="COMPONENT_SELECTOR">imgTop</field>
+                    <field name="PROP">Picture</field>
+                    <value name="VALUE">
+                      <block type="text" id="{`WC|9%(tBNqr1D7/YQD">
+                        <field name="TEXT">AppIcon~1000x1000.png</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="HQo{SPuO.TK5yN.n[*84">
+                        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="lbTop"></mutation>
+                        <field name="COMPONENT_SELECTOR">lbTop</field>
+                        <field name="PROP">Text</field>
+                        <value name="VALUE">
+                          <block type="text" id="l4,DZMdJZ.qNWDb%B,[.">
+                            <field name="TEXT">SorA\nSorA: a Homework Tracking App\n可记录历史的作业管理工具\n版本 RC_0.5.1.1</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" id="L3rocJn_Z8I%|H;`+N|#">
+                            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="lbMain"></mutation>
+                            <field name="COMPONENT_SELECTOR">lbMain</field>
+                            <field name="PROP">Text</field>
+                            <value name="VALUE">
+                              <block type="text" id="+sJ.UTMmfV37I3atr)nO">
+                                <field name="TEXT">本应用程序为北京师大附中2017年AtomHackathon参赛作品。</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="IF2">
+              <block type="logic_compare" id="y^7v)dNAQFg7PjO..igm">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="controls_getStartValue" id="P(`4~TY1/QCLVH[B~56:"></block>
+                </value>
+                <value name="B">
+                  <block type="text" id="g59j2zDFin%DYnPlfVr.">
+                    <field name="TEXT">license</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO2">
+              <block type="component_set_get" id="0mva%{T7wFYu0JZe,HdV">
+                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="lbTitle"></mutation>
+                <field name="COMPONENT_SELECTOR">lbTitle</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="text" id="[l^@n2wz)f*|6==c|l3G">
+                    <field name="TEXT">开源许可协议</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="]J}(gn2MW;cutPo1+yn{">
+                    <mutation component_type="Image" set_or_get="set" property_name="Picture" is_generic="false" instance_name="imgTop"></mutation>
+                    <field name="COMPONENT_SELECTOR">imgTop</field>
+                    <field name="PROP">Picture</field>
+                    <value name="VALUE">
+                      <block type="text" id="v#7iLgy8y_+rW}[,=A!^">
+                        <field name="TEXT">GPL.png</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="34CjWjb3H~O6yB/`m3oO">
+                        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="lbTop"></mutation>
+                        <field name="COMPONENT_SELECTOR">lbTop</field>
+                        <field name="PROP">Text</field>
+                        <value name="VALUE">
+                          <block type="text" id="#ouz+u+J!pnjoc(I5[M~">
+                            <field name="TEXT"> 本应用程序采用GNU通用公共许可协议(GPL)。</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" id="=J/lLDS?XQqO0XyJ/0uz">
+                            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="lbMain"></mutation>
+                            <field name="COMPONENT_SELECTOR">lbMain</field>
+                            <field name="PROP">Text</field>
+                            <value name="VALUE">
+                              <block type="text" id="Gn9|Es3GIz6}ei[F4!sd">
+                                <field name="TEXT">本应用程序源码开放于 https://guyutongxue.github.io/AI2/SorA/SorA.aia 。\n关于 GPL 参见 http://www.gnu.org/licenses/gpl-3.0.en.html</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="IF3">
+              <block type="logic_compare" id="K*S[U]BP{T5D.UJa7N(x">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="controls_getStartValue" id="/ba/UK%C~n,Oep!Z%lH}"></block>
+                </value>
+                <value name="B">
+                  <block type="text" id=".zq#,_Locq(EGUeNT+Tn">
+                    <field name="TEXT">log</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO3">
+              <block type="component_set_get" id="H,N4efir3p}lUMhxsGV^">
+                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="lbTitle"></mutation>
+                <field name="COMPONENT_SELECTOR">lbTitle</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="text" id="V_1_!v8}4M/ieEQf{-.P">
+                    <field name="TEXT">开发/更新日志</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="_iAMx(+]%)POQB@J1=:Q">
+                    <mutation component_type="Image" set_or_get="set" property_name="Visible" is_generic="false" instance_name="imgTop"></mutation>
+                    <field name="COMPONENT_SELECTOR">imgTop</field>
+                    <field name="PROP">Visible</field>
+                    <value name="VALUE">
+                      <block type="logic_false" id="#Fawi/Ea/si@bc%z_ghs">
+                        <field name="BOOL">FALSE</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="u*hv3=k^.7xb6NCjJxh)">
+                        <mutation component_type="WebViewer" set_or_get="set" property_name="Visible" is_generic="false" instance_name="wvMain"></mutation>
+                        <field name="COMPONENT_SELECTOR">wvMain</field>
+                        <field name="PROP">Visible</field>
+                        <value name="VALUE">
+                          <block type="logic_boolean" id="rUH#~shL]4!,-NMU)rA%">
+                            <field name="BOOL">TRUE</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_method" id="bzdTxy=Hl[f}kL1Z.=:.">
+                            <mutation component_type="WebViewer" method_name="ClearCaches" is_generic="false" instance_name="wvMain"></mutation>
+                            <field name="COMPONENT_SELECTOR">wvMain</field>
+                            <next>
+                              <block type="component_method" id="W9Ks#iE~2wXM4(LgY{m9">
+                                <mutation component_type="WebViewer" method_name="GoToUrl" is_generic="false" instance_name="wvMain"></mutation>
+                                <field name="COMPONENT_SELECTOR">wvMain</field>
+                                <value name="ARG0">
+                                  <block type="text" id="l22oBT]3Js^Z_;)TF-|5">
+                                    <field name="TEXT">https://guyutongxue.github.io/AI2/SorA/log.html</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="IF4">
+              <block type="logic_compare" id=")D.4$D!w01$VYh1D%.(5">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="controls_getStartValue" id=";03OGPT^HUwDv{QVbWgj"></block>
+                </value>
+                <value name="B">
+                  <block type="text" id="a-`3Lcan.Y8TA2hN:I.w">
+                    <field name="TEXT">egg</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO4">
+              <block type="component_method" id="Dy+G0WF}hQ?CD$fTq2f)">
+                <mutation component_type="File" method_name="SaveFile" is_generic="false" instance_name="f"></mutation>
+                <field name="COMPONENT_SELECTOR">f</field>
+                <value name="ARG0">
+                  <block type="component_set_get" id="sB,Ep:yvesUX9*@h}kKY">
+                    <mutation component_type="Button" set_or_get="get" property_name="Image" is_generic="false" instance_name="btnEgg"></mutation>
+                    <field name="COMPONENT_SELECTOR">btnEgg</field>
+                    <field name="PROP">Image</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="text" id="[H:wxgDxuDY1,Y[j2^_e">
+                    <field name="TEXT">Egg.png</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="BBzYHXl#LlOsFX$,U1$@">
+                    <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="lbTitle"></mutation>
+                    <field name="COMPONENT_SELECTOR">lbTitle</field>
+                    <field name="PROP">Text</field>
+                    <value name="VALUE">
+                      <block type="text" id="NA!($n8p0LUAHw@^k!iV">
+                        <field name="TEXT">彩蛋</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_set_get" id="F*75$6HNl[zt|Lf#OFxL">
+                        <mutation component_type="Button" set_or_get="set" property_name="Visible" is_generic="false" instance_name="btnEgg"></mutation>
+                        <field name="COMPONENT_SELECTOR">btnEgg</field>
+                        <field name="PROP">Visible</field>
+                        <value name="VALUE">
+                          <block type="logic_boolean" id="g]qxtG:%X{638niw}Hcl">
+                            <field name="BOOL">TRUE</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_set_get" id="c;`/6b{9}JM$@m/E?#QG">
+                            <mutation component_type="Image" set_or_get="set" property_name="Visible" is_generic="false" instance_name="imgTop"></mutation>
+                            <field name="COMPONENT_SELECTOR">imgTop</field>
+                            <field name="PROP">Visible</field>
+                            <value name="VALUE">
+                              <block type="logic_boolean" id="sD`+sH6P.78JGUXhb+ZY">
+                                <field name="BOOL">FALSE</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="component_set_get" id=":{Dh5SNqCt*?`z!TtR-,">
+                                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="lbTop"></mutation>
+                                <field name="COMPONENT_SELECTOR">lbTop</field>
+                                <field name="PROP">Text</field>
+                                <value name="VALUE">
+                                  <block type="text" id="?`PN)zll.:n:5_;1rLG2">
+                                    <field name="TEXT">SorA，そら，穹。\n这个App名字的真正意义——春日野穹。\n致所有妹控们。</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="gXDe/1|hMzO7@TF!_D[N" x="-407" y="840">
+    <mutation component_type="Button" instance_name="btnEgg" event_name="LongClick"></mutation>
+    <field name="COMPONENT_SELECTOR">btnEgg</field>
+    <statement name="DO">
+      <block type="component_method" id="6|T8S#*@4go=0{9!^e9(">
+        <mutation component_type="Sharing" method_name="ShareFile" is_generic="false" instance_name="sh"></mutation>
+        <field name="COMPONENT_SELECTOR">sh</field>
+        <value name="ARG0">
+          <block type="text" id="DrfaCeE_+-;qx-]=_+Ni">
+            <field name="TEXT">Egg.png</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="t2]O~ZpFFTd20gVzlnl%" x="-406" y="942">
+    <mutation component_type="Button" instance_name="btnBack" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">btnBack</field>
+    <statement name="DO">
+      <block type="controls_if" id="Iupzd%6shWpXgI+%,}]%">
+        <value name="IF0">
+          <block type="logic_compare" id="5nk?rH+]bk7S*,GW_Q8p">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="controls_getStartValue" id="dXVC#G_{jEQ!IfDRccK^"></block>
+            </value>
+            <value name="B">
+              <block type="text" id="uC2XD#c9dU.POG@[=5jX">
+                <field name="TEXT">egg</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_method" id="D5(gGKc[}sowZJO!a#Fu">
+            <mutation component_type="File" method_name="Delete" is_generic="false" instance_name="f"></mutation>
+            <field name="COMPONENT_SELECTOR">f</field>
+            <value name="ARG0">
+              <block type="text" id="LT:`:@qW^D-D7+Zp9*@A">
+                <field name="TEXT">Egg.png</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_closeScreen" id="nwb`1Sy7gO|?h[D#7BrM"></block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="159" language-version="20"></yacodeblocks>
+</xml>
