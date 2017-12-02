@@ -135,7 +135,7 @@
                         <field name="PROP">Text</field>
                         <value name="VALUE">
                           <block type="text" id="l4,DZMdJZ.qNWDb%B,[.">
-                            <field name="TEXT">SorA\nSorA: a Homework Tracking App\n可记录历史的作业管理工具\n版本 RC_0.5.1.1</field>
+                            <field name="TEXT">SorA\nSorA: a Homework Tracking App\n可记录历史的作业管理工具\n版本 RC_0.5.2</field>
                           </block>
                         </value>
                         <next>
@@ -145,7 +145,7 @@
                             <field name="PROP">Text</field>
                             <value name="VALUE">
                               <block type="text" id="+sJ.UTMmfV37I3atr)nO">
-                                <field name="TEXT">本应用程序为北京师大附中2017年AtomHackathon参赛作品。</field>
+                                <field name="TEXT">本应用程序为北京师大附中 2017年 AtomHackathon 参赛作品。</field>
                               </block>
                             </value>
                           </block>
@@ -206,7 +206,7 @@
                             <field name="PROP">Text</field>
                             <value name="VALUE">
                               <block type="text" id="Gn9|Es3GIz6}ei[F4!sd">
-                                <field name="TEXT">本应用程序源码开放于 https://guyutongxue.github.io/AI2/SorA/SorA.aia 。\n关于 GPL 参见 http://www.gnu.org/licenses/gpl-3.0.en.html</field>
+                                <field name="TEXT">本应用程序源码开放于GitHub：https://github.com/Guyutongxue/SorA 。\n关于 GPL 参见 http://www.gnu.org/licenses/gpl-3.0.en.html</field>
                               </block>
                             </value>
                           </block>
@@ -270,7 +270,7 @@
                                 <field name="COMPONENT_SELECTOR">wvMain</field>
                                 <value name="ARG0">
                                   <block type="text" id="l22oBT]3Js^Z_;)TF-|5">
-                                    <field name="TEXT">https://guyutongxue.github.io/AI2/SorA/log.html</field>
+                                    <field name="TEXT">https://guyutongxue.github.io/SorA/log.html</field>
                                   </block>
                                 </value>
                               </block>
