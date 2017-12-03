@@ -84,7 +84,7 @@
                             <field name="PROP">Text</field>
                             <value name="VALUE">
                               <block type="text" id="x*$JjLs5SD8jJJ#QfB+.">
-                                <field name="TEXT">本地服务器版本：App Inventor 2 Ultimate\n图标来源：IconFont\n图像编辑：Adobe Photoshop CC 2017\nPC端调试模拟：BlueStack蓝叠中国</field>
+                                <field name="TEXT">本地服务器版本：App Inventor 2 Ultimate 2.43\n图标来源：IconFont\n图像编辑：Adobe Photoshop CC 2017\nPC端调试模拟：Bluestacks蓝叠中国</field>
                               </block>
                             </value>
                           </block>
@@ -135,7 +135,7 @@
                         <field name="PROP">Text</field>
                         <value name="VALUE">
                           <block type="text" id="l4,DZMdJZ.qNWDb%B,[.">
-                            <field name="TEXT">SorA\nSorA: a Homework Tracking App\n可记录历史的作业管理工具\n版本 RC_0.5.2</field>
+                            <field name="TEXT">SorA\nSorA: a Homework Tracking App\n可记录历史的作业管理工具\n版本 RC_0.5.2.1</field>
                           </block>
                         </value>
                         <next>
