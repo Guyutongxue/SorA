@@ -195,56 +195,51 @@
     <mutation component_type="Form" instance_name="View" event_name="OtherScreenClosed"></mutation>
     <field name="COMPONENT_SELECTOR">View</field>
     <statement name="DO">
-      <block type="component_set_get" id="i15Zszoi__L6xQCB`iCu">
-        <mutation component_type="Form" set_or_get="set" property_name="BackgroundColor" is_generic="false" instance_name="View"></mutation>
-        <field name="COMPONENT_SELECTOR">View</field>
-        <field name="PROP">BackgroundColor</field>
-        <value name="VALUE">
-          <block type="color_make_color" id="8mfu`]VUS:$.sbq*uY4;">
-            <value name="COLORLIST">
-              <block type="lists_create_with" id="do0YKu.U[Q7Fw?$GV(;o" inline="false">
-                <mutation items="3"></mutation>
-                <value name="ADD0">
-                  <block type="math_number" id="z1z!W=*ebsj!f:8^}C]0">
-                    <field name="NUM">227</field>
-                  </block>
-                </value>
-                <value name="ADD1">
-                  <block type="math_number" id="KuNH%[oP:=gGp#?9Fqzz">
-                    <field name="NUM">227</field>
-                  </block>
-                </value>
-                <value name="ADD2">
-                  <block type="math_number" id="ffuYkTl{~p$g|M{u8Qb,">
-                    <field name="NUM">227</field>
-                  </block>
-                </value>
+      <block type="controls_if" id="Lm^x.N99BK6YX)3VGEAb">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="S*eUE|Kl[^R(S0~wiy$n">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="lexical_variable_get" id="6~|?5C]/mEOauA~z}#4m">
+                <mutation>
+                  <eventparam name="result"></eventparam>
+                </mutation>
+                <field name="VAR">result</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="G]ll$Dxts6Scc*z!x@#C">
+                <field name="NUM">2</field>
               </block>
             </value>
           </block>
         </value>
-        <next>
-          <block type="component_set_get" id="te0kE9Abh=Rl+?SpYB5+">
-            <mutation component_type="Canvas" set_or_get="set" property_name="BackgroundColor" is_generic="false" instance_name="cvPercent"></mutation>
-            <field name="COMPONENT_SELECTOR">cvPercent</field>
+        <statement name="DO0">
+          <block type="controls_closeScreen" id="@L7/8D^_x[N`PfeDW6LY"></block>
+        </statement>
+        <statement name="ELSE">
+          <block type="component_set_get" id="i15Zszoi__L6xQCB`iCu">
+            <mutation component_type="Form" set_or_get="set" property_name="BackgroundColor" is_generic="false" instance_name="View"></mutation>
+            <field name="COMPONENT_SELECTOR">View</field>
             <field name="PROP">BackgroundColor</field>
             <value name="VALUE">
-              <block type="color_make_color" id="hV_`7o@SI$!t`qE.pqj#">
+              <block type="color_make_color" id="8mfu`]VUS:$.sbq*uY4;">
                 <value name="COLORLIST">
-                  <block type="lists_create_with" id="e2b-Q,HV/q1M!A..e/WM" inline="false">
+                  <block type="lists_create_with" id="do0YKu.U[Q7Fw?$GV(;o" inline="false">
                     <mutation items="3"></mutation>
                     <value name="ADD0">
-                      <block type="math_number" id="BXw1{#KY]|TNy|?QT)M)">
+                      <block type="math_number" id="z1z!W=*ebsj!f:8^}C]0">
                         <field name="NUM">227</field>
                       </block>
                     </value>
                     <value name="ADD1">
-                      <block type="math_number" id="#H!KcP-jkO~u_/QJuiXN">
+                      <block type="math_number" id="KuNH%[oP:=gGp#?9Fqzz">
                         <field name="NUM">227</field>
                       </block>
                     </value>
                     <value name="ADD2">
-                      <block type="math_number" id="{;k]}s--?lR#:DBm7w!2">
+                      <block type="math_number" id="ffuYkTl{~p$g|M{u8Qb,">
                         <field name="NUM">227</field>
                       </block>
                     </value>
@@ -253,23 +248,54 @@
               </block>
             </value>
             <next>
-              <block type="procedures_callnoreturn" id="{6~LZ#yX(jlQ*_8,?=f4" inline="false">
-                <mutation name="getFromDB"></mutation>
-                <field name="PROCNAME">getFromDB</field>
-                <next>
-                  <block type="component_set_get" id="5)MvA@A|d~5a-K!-m3Ob">
-                    <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="lbTitle"></mutation>
-                    <field name="COMPONENT_SELECTOR">lbTitle</field>
-                    <field name="PROP">Text</field>
-                    <value name="VALUE">
-                      <block type="lexical_variable_get" id="0WNCzwkfP$%]1uqEb!n?">
-                        <field name="VAR">global date</field>
+              <block type="component_set_get" id="te0kE9Abh=Rl+?SpYB5+">
+                <mutation component_type="Canvas" set_or_get="set" property_name="BackgroundColor" is_generic="false" instance_name="cvPercent"></mutation>
+                <field name="COMPONENT_SELECTOR">cvPercent</field>
+                <field name="PROP">BackgroundColor</field>
+                <value name="VALUE">
+                  <block type="color_make_color" id="hV_`7o@SI$!t`qE.pqj#">
+                    <value name="COLORLIST">
+                      <block type="lists_create_with" id="e2b-Q,HV/q1M!A..e/WM" inline="false">
+                        <mutation items="3"></mutation>
+                        <value name="ADD0">
+                          <block type="math_number" id="BXw1{#KY]|TNy|?QT)M)">
+                            <field name="NUM">227</field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="math_number" id="#H!KcP-jkO~u_/QJuiXN">
+                            <field name="NUM">227</field>
+                          </block>
+                        </value>
+                        <value name="ADD2">
+                          <block type="math_number" id="{;k]}s--?lR#:DBm7w!2">
+                            <field name="NUM">227</field>
+                          </block>
+                        </value>
                       </block>
                     </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="procedures_callnoreturn" id="{6~LZ#yX(jlQ*_8,?=f4" inline="false">
+                    <mutation name="getFromDB"></mutation>
+                    <field name="PROCNAME">getFromDB</field>
                     <next>
-                      <block type="procedures_callnoreturn" id="Uf5ctQ9e;ln%Zzk]rdp_" inline="false">
-                        <mutation name="getItems"></mutation>
-                        <field name="PROCNAME">getItems</field>
+                      <block type="component_set_get" id="5)MvA@A|d~5a-K!-m3Ob">
+                        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="lbTitle"></mutation>
+                        <field name="COMPONENT_SELECTOR">lbTitle</field>
+                        <field name="PROP">Text</field>
+                        <value name="VALUE">
+                          <block type="lexical_variable_get" id="0WNCzwkfP$%]1uqEb!n?">
+                            <field name="VAR">global date</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="procedures_callnoreturn" id="Uf5ctQ9e;ln%Zzk]rdp_" inline="false">
+                            <mutation name="getItems"></mutation>
+                            <field name="PROCNAME">getItems</field>
+                          </block>
+                        </next>
                       </block>
                     </next>
                   </block>
@@ -277,7 +303,7 @@
               </block>
             </next>
           </block>
-        </next>
+        </statement>
       </block>
     </statement>
   </block>

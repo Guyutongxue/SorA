@@ -176,7 +176,7 @@
             <field name="COMPONENT_SELECTOR">nDebug</field>
             <value name="ARG0">
               <block type="text" id="]IyhhUuC.?ExH7KDm[;6">
-                <field name="TEXT">选择您要清除的数据。如果选择清除所有数据，应用将恢复最初设置。</field>
+                <field name="TEXT">选择您要进行的操作：</field>
               </block>
             </value>
             <value name="ARG1">
@@ -191,7 +191,7 @@
             </value>
             <value name="ARG3">
               <block type="text" id="UO6[Yat!zJRGD@s=a@)V">
-                <field name="TEXT">清除所有数据</field>
+                <field name="TEXT">恢复默认数据</field>
               </block>
             </value>
             <value name="ARG4">
@@ -323,7 +323,7 @@
             </value>
             <value name="B">
               <block type="text" id="D4lUVAYMQ0hY.0sGy1A0">
-                <field name="TEXT">清除所有数据</field>
+                <field name="TEXT">恢复默认数据</field>
               </block>
             </value>
           </block>

@@ -135,7 +135,7 @@
                         <field name="PROP">Text</field>
                         <value name="VALUE">
                           <block type="text" id="l4,DZMdJZ.qNWDb%B,[.">
-                            <field name="TEXT">SorA\nSorA: a Homework Tracking App\n可记录历史的作业管理工具\n版本 RC_0.5.2.2</field>
+                            <field name="TEXT">SorA\nSorA: a Homework Tracking App\n可记录历史的作业管理工具\n版本 RC_0.5.3</field>
                           </block>
                         </value>
                         <next>
@@ -297,49 +297,43 @@
               </block>
             </value>
             <statement name="DO4">
-              <block type="component_method" id="Dy+G0WF}hQ?CD$fTq2f)">
-                <mutation component_type="File" method_name="SaveFile" is_generic="false" instance_name="f"></mutation>
-                <field name="COMPONENT_SELECTOR">f</field>
-                <value name="ARG0">
-                  <block type="component_set_get" id="sB,Ep:yvesUX9*@h}kKY">
-                    <mutation component_type="Button" set_or_get="get" property_name="Image" is_generic="false" instance_name="btnEgg"></mutation>
-                    <field name="COMPONENT_SELECTOR">btnEgg</field>
-                    <field name="PROP">Image</field>
-                  </block>
-                </value>
-                <value name="ARG1">
-                  <block type="text" id="[H:wxgDxuDY1,Y[j2^_e">
-                    <field name="TEXT">Egg.png</field>
+              <block type="component_set_get" id="Qm]CiW@Z$-Z;ZBqX)D|!">
+                <mutation component_type="Image" set_or_get="set" property_name="Height" is_generic="false" instance_name="imgTop"></mutation>
+                <field name="COMPONENT_SELECTOR">imgTop</field>
+                <field name="PROP">Height</field>
+                <value name="VALUE">
+                  <block type="math_number" id="(UKiFN}SD1wA2P]Jr:kn">
+                    <field name="NUM">424</field>
                   </block>
                 </value>
                 <next>
-                  <block type="component_set_get" id="BBzYHXl#LlOsFX$,U1$@">
-                    <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="lbTitle"></mutation>
-                    <field name="COMPONENT_SELECTOR">lbTitle</field>
-                    <field name="PROP">Text</field>
+                  <block type="component_set_get" id="D,a|F-[i3}4~Q5a!6lM#">
+                    <mutation component_type="Image" set_or_get="set" property_name="Width" is_generic="false" instance_name="imgTop"></mutation>
+                    <field name="COMPONENT_SELECTOR">imgTop</field>
+                    <field name="PROP">Width</field>
                     <value name="VALUE">
-                      <block type="text" id="NA!($n8p0LUAHw@^k!iV">
-                        <field name="TEXT">彩蛋</field>
+                      <block type="math_number" id="[x?`*^/1CIvC}jEM#|Kr">
+                        <field name="NUM">300</field>
                       </block>
                     </value>
                     <next>
-                      <block type="component_set_get" id="F*75$6HNl[zt|Lf#OFxL">
-                        <mutation component_type="Button" set_or_get="set" property_name="Visible" is_generic="false" instance_name="btnEgg"></mutation>
-                        <field name="COMPONENT_SELECTOR">btnEgg</field>
-                        <field name="PROP">Visible</field>
+                      <block type="component_set_get" id="D%([_d^goQ_`J^jPQ4*u">
+                        <mutation component_type="Image" set_or_get="set" property_name="Picture" is_generic="false" instance_name="imgTop"></mutation>
+                        <field name="COMPONENT_SELECTOR">imgTop</field>
+                        <field name="PROP">Picture</field>
                         <value name="VALUE">
-                          <block type="logic_boolean" id="g]qxtG:%X{638niw}Hcl">
-                            <field name="BOOL">TRUE</field>
+                          <block type="text" id="a[SZ.dHO!D|48@.Uk?DT">
+                            <field name="TEXT">Egg.png</field>
                           </block>
                         </value>
                         <next>
-                          <block type="component_set_get" id="c;`/6b{9}JM$@m/E?#QG">
-                            <mutation component_type="Image" set_or_get="set" property_name="Visible" is_generic="false" instance_name="imgTop"></mutation>
-                            <field name="COMPONENT_SELECTOR">imgTop</field>
-                            <field name="PROP">Visible</field>
+                          <block type="component_set_get" id="BBzYHXl#LlOsFX$,U1$@">
+                            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="lbTitle"></mutation>
+                            <field name="COMPONENT_SELECTOR">lbTitle</field>
+                            <field name="PROP">Text</field>
                             <value name="VALUE">
-                              <block type="logic_boolean" id="sD`+sH6P.78JGUXhb+ZY">
-                                <field name="BOOL">FALSE</field>
+                              <block type="text" id="NA!($n8p0LUAHw@^k!iV">
+                                <field name="TEXT">彩蛋</field>
                               </block>
                             </value>
                             <next>
@@ -367,54 +361,11 @@
       </block>
     </statement>
   </block>
-  <block type="component_event" id="gXDe/1|hMzO7@TF!_D[N" x="-407" y="840">
-    <mutation component_type="Button" instance_name="btnEgg" event_name="LongClick"></mutation>
-    <field name="COMPONENT_SELECTOR">btnEgg</field>
-    <statement name="DO">
-      <block type="component_method" id="6|T8S#*@4go=0{9!^e9(">
-        <mutation component_type="Sharing" method_name="ShareFile" is_generic="false" instance_name="sh"></mutation>
-        <field name="COMPONENT_SELECTOR">sh</field>
-        <value name="ARG0">
-          <block type="text" id="DrfaCeE_+-;qx-]=_+Ni">
-            <field name="TEXT">Egg.png</field>
-          </block>
-        </value>
-      </block>
-    </statement>
-  </block>
-  <block type="component_event" id="t2]O~ZpFFTd20gVzlnl%" x="-406" y="942">
+  <block type="component_event" id="t2]O~ZpFFTd20gVzlnl%" x="-408" y="998">
     <mutation component_type="Button" instance_name="btnBack" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">btnBack</field>
     <statement name="DO">
-      <block type="controls_if" id="Iupzd%6shWpXgI+%,}]%">
-        <value name="IF0">
-          <block type="logic_compare" id="5nk?rH+]bk7S*,GW_Q8p">
-            <field name="OP">EQ</field>
-            <value name="A">
-              <block type="controls_getStartValue" id="dXVC#G_{jEQ!IfDRccK^"></block>
-            </value>
-            <value name="B">
-              <block type="text" id="uC2XD#c9dU.POG@[=5jX">
-                <field name="TEXT">egg</field>
-              </block>
-            </value>
-          </block>
-        </value>
-        <statement name="DO0">
-          <block type="component_method" id="D5(gGKc[}sowZJO!a#Fu">
-            <mutation component_type="File" method_name="Delete" is_generic="false" instance_name="f"></mutation>
-            <field name="COMPONENT_SELECTOR">f</field>
-            <value name="ARG0">
-              <block type="text" id="LT:`:@qW^D-D7+Zp9*@A">
-                <field name="TEXT">Egg.png</field>
-              </block>
-            </value>
-          </block>
-        </statement>
-        <next>
-          <block type="controls_closeScreen" id="nwb`1Sy7gO|?h[D#7BrM"></block>
-        </next>
-      </block>
+      <block type="controls_closeScreen" id="nwb`1Sy7gO|?h[D#7BrM"></block>
     </statement>
   </block>
   <yacodeblocks ya-version="159" language-version="20"></yacodeblocks>
