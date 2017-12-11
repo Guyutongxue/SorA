@@ -164,9 +164,9 @@
               </block>
             </value>
             <next>
-              <block type="component_set_get" id="=V/E+m2A:tK#KPes[}ge">
-                <mutation component_type="ListPicker" set_or_get="set" property_name="Elements" is_generic="false" instance_name="lpSubject"></mutation>
-                <field name="COMPONENT_SELECTOR">lpSubject</field>
+              <block type="component_set_get" id="4?%HzOR]0{(g5IkNEw(W">
+                <mutation component_type="Spinner" set_or_get="set" property_name="Elements" is_generic="false" instance_name="spnSubject"></mutation>
+                <field name="COMPONENT_SELECTOR">spnSubject</field>
                 <field name="PROP">Elements</field>
                 <value name="VALUE">
                   <block type="lexical_variable_get" id="v)iUX-n8DxZROc:R7ed2">
@@ -371,6 +371,12 @@
                 <field name="TEXT">新标签</field>
               </block>
             </value>
+            <next>
+              <block type="procedures_callnoreturn" id="qd-,rG(`c^B:,O,z%KB_" inline="false">
+                <mutation name="getItems"></mutation>
+                <field name="PROCNAME">getItems</field>
+              </block>
+            </next>
           </block>
         </statement>
         <next>
@@ -411,16 +417,16 @@
       </block>
     </statement>
   </block>
-  <block type="component_event" id="_8t8s2[}.;8ntIB[rDQK" x="546" y="279">
-    <mutation component_type="ListPicker" instance_name="lpSubject" event_name="AfterPicking"></mutation>
-    <field name="COMPONENT_SELECTOR">lpSubject</field>
+  <block type="component_event" id="#T_A:A.IIsP[Ga=oL?B+" x="538" y="415">
+    <mutation component_type="Spinner" instance_name="spnSubject" event_name="AfterSelecting"></mutation>
+    <field name="COMPONENT_SELECTOR">spnSubject</field>
     <statement name="DO">
       <block type="lexical_variable_set" id="{LWU34AVI~H-T8M4(8nQ">
         <field name="VAR">global currentSubject</field>
         <value name="VALUE">
-          <block type="component_set_get" id=")uq?qyiwxngbb;EFAe;]">
-            <mutation component_type="ListPicker" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lpSubject"></mutation>
-            <field name="COMPONENT_SELECTOR">lpSubject</field>
+          <block type="component_set_get" id="[BPt8J;!q?pcQXsNb3S3">
+            <mutation component_type="Spinner" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="spnSubject"></mutation>
+            <field name="COMPONENT_SELECTOR">spnSubject</field>
             <field name="PROP">SelectionIndex</field>
           </block>
         </value>
@@ -452,7 +458,7 @@
       </block>
     </statement>
   </block>
-  <block type="component_event" id="x:s]|=T^|rF@UnxJZmG~" x="-407" y="538">
+  <block type="component_event" id="x:s]|=T^|rF@UnxJZmG~" x="-419" y="560">
     <mutation component_type="Button" instance_name="btnInput" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">btnInput</field>
     <statement name="DO">

@@ -342,71 +342,151 @@
                   </block>
                 </value>
                 <value name="ARG1">
-                  <block type="lists_create_with" id="Ulg^-#Zurm8TBLe]`6.Z">
-                    <mutation items="13"></mutation>
+                  <block type="lists_create_with" id="[#8Q]!/ro-jfk!*Z.]Q`">
+                    <mutation items="8"></mutation>
                     <value name="ADD0">
-                      <block type="text" id="?RdcxZ:(DRPZjO3O8H$~">
-                        <field name="TEXT">卷子</field>
+                      <block type="lists_create_with" id="+T.wMJ@Q!+0VX@M=%b;5">
+                        <mutation items="9"></mutation>
+                        <value name="ADD0">
+                          <block type="text" id="L=g4hi|RAu#p0rFfuTU^">
+                            <field name="TEXT">练习册</field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="text" id="^5uy4d7QOYKW+_/G}..T">
+                            <field name="TEXT">卷子</field>
+                          </block>
+                        </value>
+                        <value name="ADD2">
+                          <block type="text" id="N3g+g!j{N[$8Ch7+ZZVt">
+                            <field name="TEXT">改错</field>
+                          </block>
+                        </value>
+                        <value name="ADD3">
+                          <block type="text" id="hsdkpgm1A?k[CtL7X,k4">
+                            <field name="TEXT">课</field>
+                          </block>
+                        </value>
+                        <value name="ADD4">
+                          <block type="text" id="+rw}91URC6U*rd]fk00/">
+                            <field name="TEXT">章</field>
+                          </block>
+                        </value>
+                        <value name="ADD5">
+                          <block type="text" id="2n=g%`od~H(VT_BUi|M$">
+                            <field name="TEXT">题</field>
+                          </block>
+                        </value>
+                        <value name="ADD6">
+                          <block type="text" id="$fLy:4GKI,D!y]BLs25K">
+                            <field name="TEXT">页</field>
+                          </block>
+                        </value>
+                        <value name="ADD7">
+                          <block type="text" id="Opz]I{TD}~3bO1.`ar#K">
+                            <field name="TEXT">节</field>
+                          </block>
+                        </value>
+                        <value name="ADD8">
+                          <block type="text" id="kccuGl8ypH$Q9R2j+~?S">
+                            <field name="TEXT">完成</field>
+                          </block>
+                        </value>
                       </block>
                     </value>
                     <value name="ADD1">
-                      <block type="text" id="LTP3TP/5O6%Cj.gq_R_c">
-                        <field name="TEXT">学探诊</field>
+                      <block type="lists_create_with" id="27..5ao?%a:[AzW2?}Dd">
+                        <mutation items="3"></mutation>
+                        <value name="ADD0">
+                          <block type="text" id="vQG;BnNr3JIme`#OXH/p">
+                            <field name="TEXT">作文</field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="text" id="H#`ZZ/U1QLwc*FI._e`@">
+                            <field name="TEXT">三行对译</field>
+                          </block>
+                        </value>
+                        <value name="ADD2">
+                          <block type="text" id="#FyP^Kaf6.O!898M6lMq">
+                            <field name="TEXT">阅读</field>
+                          </block>
+                        </value>
                       </block>
                     </value>
                     <value name="ADD2">
-                      <block type="text" id="vni]0#U+z%Q_{]Dcy6pH">
-                        <field name="TEXT">练习册</field>
+                      <block type="lists_create_with" id="3,3PqwAY.J5#9odALN1O">
+                        <mutation items="2"></mutation>
+                        <value name="ADD0">
+                          <block type="text" id="r+^~18OG*!HlJs^5fiSz">
+                            <field name="TEXT">课本</field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="text" id="N?SaJyS{:|T0AQyduBMt">
+                            <field name="TEXT">周末练习</field>
+                          </block>
+                        </value>
                       </block>
                     </value>
                     <value name="ADD3">
-                      <block type="text" id="{o)TEc1%EVw~ibHF_ed4">
-                        <field name="TEXT">课本</field>
+                      <block type="lists_create_with" id="vy%HWE,6VvpKva39K(9u">
+                        <mutation items="3"></mutation>
+                        <value name="ADD0">
+                          <block type="text" id="sZgIRqs+n3/(+#H#;*..">
+                            <field name="TEXT">小说</field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="text" id="xHAQbN:`m9/lw!L8S*/C">
+                            <field name="TEXT">阅读完型</field>
+                          </block>
+                        </value>
+                        <value name="ADD2">
+                          <block type="text" id="{`r;U-$2PPZ;R6HFz}no">
+                            <field name="TEXT">抄单词</field>
+                          </block>
+                        </value>
                       </block>
                     </value>
                     <value name="ADD4">
-                      <block type="text" id="Uu=YAfn/|c@f!4a8-ZTc">
-                        <field name="TEXT">改错</field>
+                      <block type="lists_create_with" id="U1ooh0vA041]nGDWdZl1">
+                        <mutation items="1"></mutation>
+                        <value name="ADD0">
+                          <block type="text" id="([@Qe(axYWDoT+K;9JE#">
+                            <field name="TEXT">看书思考</field>
+                          </block>
+                        </value>
                       </block>
                     </value>
                     <value name="ADD5">
-                      <block type="text" id="l$9EBH?O.k8#A198S$QU">
-                        <field name="TEXT">页</field>
+                      <block type="lists_create_with" id=";]XZG~x{n[)@GU0C:?m0">
+                        <mutation items="1"></mutation>
+                        <value name="ADD0">
+                          <block type="text" id="VlbbM5#p-Qa~)wO|Rl5/">
+                            <field name="TEXT">学探诊</field>
+                          </block>
+                        </value>
                       </block>
                     </value>
                     <value name="ADD6">
-                      <block type="text" id="yO#o3Du7oYQmdi:7G@vb">
-                        <field name="TEXT">题</field>
+                      <block type="lists_create_with" id="3yP.C4l1IM0o|}6D1QHw">
+                        <mutation items="1"></mutation>
+                        <value name="ADD0">
+                          <block type="text" id="trzJ~~Ugt7jo(R3tzt%H">
+                            <field name="TEXT">实验预习指导</field>
+                          </block>
+                        </value>
                       </block>
                     </value>
                     <value name="ADD7">
-                      <block type="text" id="jes)Sk#@wQ1OUdX*]J8C">
-                        <field name="TEXT">课</field>
-                      </block>
-                    </value>
-                    <value name="ADD8">
-                      <block type="text" id="qa+u_=f,Lq[[n|s}eOv_">
-                        <field name="TEXT">章</field>
-                      </block>
-                    </value>
-                    <value name="ADD9">
-                      <block type="text" id="_,]jE:jP1/e,7$O%=gmn">
-                        <field name="TEXT">节</field>
-                      </block>
-                    </value>
-                    <value name="ADD10">
-                      <block type="text" id="vYD^+8k^QO_^{v%94m4b">
-                        <field name="TEXT">阅读</field>
-                      </block>
-                    </value>
-                    <value name="ADD11">
-                      <block type="text" id="yhKpYoPhm::OS*Gc{c%M">
-                        <field name="TEXT">小说</field>
-                      </block>
-                    </value>
-                    <value name="ADD12">
-                      <block type="text" id=":Ne6SnRqGN`Vz/F1]1]3">
-                        <field name="TEXT">完成</field>
+                      <block type="lists_create_with" id="RADm(wn?`]!EvO~5.7t1">
+                        <mutation items="1"></mutation>
+                        <value name="ADD0">
+                          <block type="text" id="_mZK/6L#83!OhGb=X/~U">
+                            <field name="TEXT">提纲</field>
+                          </block>
+                        </value>
                       </block>
                     </value>
                   </block>
