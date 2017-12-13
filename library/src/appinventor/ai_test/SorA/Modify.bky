@@ -197,7 +197,7 @@
       </block>
     </value>
   </block>
-  <block type="global_declaration" id="`Q?bUNDLftz93UVN{-4]" x="-1177" y="-382">
+  <block type="global_declaration" id="`Q?bUNDLftz93UVN{-4]" x="-1176" y="-401">
     <field name="NAME">subject</field>
     <value name="VALUE">
       <block type="lists_create_with" id="`:#%qow]UpX:3ear?6m9">
@@ -205,7 +205,18 @@
       </block>
     </value>
   </block>
-  <block type="procedures_defreturn" id="u]r;!cU16H3o*Kn7_f5B" x="758" y="-446">
+  <block type="global_declaration" id=";PRsCA;7S^2ixK|J5[s?" x="-1181" y="-364">
+    <field name="NAME">pointer</field>
+    <comment pinned="false" h="86" w="488">pointer is a array. It stores the position of thd DB-List( lsCurret ) of each element of ListView.
+pointer[the index of ListView]={index of subject, index of each homework}
+    </comment>
+    <value name="VALUE">
+      <block type="lists_create_with" id="{PQw(!9.)XFjy)g#`Xgs">
+        <mutation items="0"></mutation>
+      </block>
+    </value>
+  </block>
+  <block type="procedures_defreturn" id="u]r;!cU16H3o*Kn7_f5B" x="729" y="-438">
     <mutation>
       <arg name="list"></arg>
     </mutation>
@@ -410,14 +421,11 @@
       </block>
     </statement>
   </block>
-  <block type="global_declaration" id=";PRsCA;7S^2ixK|J5[s?" x="-1179" y="-331">
-    <field name="NAME">pointer</field>
-    <comment pinned="false" h="86" w="488">pointer is a array. It stores the position of thd DB-List( lsCurret ) of each element of ListView.
-pointer[the index of ListView]={index of subject, index of each homework}
-    </comment>
+  <block type="global_declaration" id="*L=:F:E}VXKsU4.-V{/`" x="-1177" y="-322">
+    <field name="NAME">selection</field>
     <value name="VALUE">
-      <block type="lists_create_with" id="{PQw(!9.)XFjy)g#`Xgs">
-        <mutation items="0"></mutation>
+      <block type="math_number" id="7AN^(3O==D,DEcmLMFD(">
+        <field name="NUM">1</field>
       </block>
     </value>
   </block>
@@ -454,18 +462,12 @@ pointer[the index of ListView]={index of subject, index of each homework}
       </block>
     </statement>
   </block>
-  <block type="procedures_defnoreturn" id="Z6OB@h/#3J(ZH5yb7oZ/" x="777" y="-202">
+  <block type="procedures_defnoreturn" id="Z6OB@h/#3J(ZH5yb7oZ/" x="741" y="-204">
     <field name="NAME">getItems</field>
     <statement name="STACK">
-      <block type="component_set_get" id="rSWw+MY:V3J1)clOzg3+">
-        <mutation component_type="ListView" set_or_get="set" property_name="Elements" is_generic="false" instance_name="lvHomework"></mutation>
-        <field name="COMPONENT_SELECTOR">lvHomework</field>
-        <field name="PROP">Elements</field>
-        <value name="VALUE">
-          <block type="lists_create_with" id="7S1NH}[Q=6pXLU:]CyeA">
-            <mutation items="0"></mutation>
-          </block>
-        </value>
+      <block type="component_method" id="#s0QF{{MrFI-2IJIz(6w">
+        <mutation component_type="RichListView" method_name="Clear" is_generic="false" instance_name="rlvHomework"></mutation>
+        <field name="COMPONENT_SELECTOR">rlvHomework</field>
         <next>
           <block type="lexical_variable_set" id="_k|3`Cx-4$GlB7YtLUM9">
             <field name="VAR">global pointer</field>
@@ -503,8 +505,8 @@ pointer[the index of ListView]={index of subject, index of each homework}
                     </mutation>
                     <field name="VAR0">value</field>
                     <value name="DECL0">
-                      <block type="text" id="g|fZh]WNi|U_+k[.I`#Q">
-                        <field name="TEXT"></field>
+                      <block type="lists_create_with" id="bn}Ko`4fgDHI*9Zo@1vz">
+                        <mutation items="0"></mutation>
                       </block>
                     </value>
                     <statement name="STACK">
@@ -586,37 +588,42 @@ pointer[the index of ListView]={index of subject, index of each homework}
                                   <block type="lexical_variable_set" id="tR,n[H;CCcZi(W8*AoCi">
                                     <field name="VAR">value</field>
                                     <value name="VALUE">
-                                      <block type="text_join" id="sY$m{If+fMa`05-xc*O9">
-                                        <mutation items="3"></mutation>
+                                      <block type="lists_create_with" id="ppLeRbbNcWZJ[pjd2g#H">
+                                        <mutation items="1"></mutation>
                                         <value name="ADD0">
-                                          <block type="lists_select_item" id="FW@FTk8,+(,}#zU$ltP*">
-                                            <value name="LIST">
-                                              <block type="lexical_variable_get" id="HIEEWR%7IuO[.llg?{=!">
-                                                <field name="VAR">global subject</field>
+                                          <block type="text_join" id="sY$m{If+fMa`05-xc*O9">
+                                            <mutation items="3"></mutation>
+                                            <value name="ADD0">
+                                              <block type="lists_select_item" id="FW@FTk8,+(,}#zU$ltP*">
+                                                <value name="LIST">
+                                                  <block type="lexical_variable_get" id="HIEEWR%7IuO[.llg?{=!">
+                                                    <field name="VAR">global subject</field>
+                                                  </block>
+                                                </value>
+                                                <value name="NUM">
+                                                  <block type="lexical_variable_get" id="y}`/{%h7cl]5P^V6Bt}w">
+                                                    <field name="VAR">i</field>
+                                                  </block>
+                                                </value>
                                               </block>
                                             </value>
-                                            <value name="NUM">
-                                              <block type="lexical_variable_get" id="y}`/{%h7cl]5P^V6Bt}w">
-                                                <field name="VAR">i</field>
+                                            <value name="ADD1">
+                                              <block type="text" id="1~|OU9MM1`eX/VMatk;V">
+                                                <field name="TEXT"> : </field>
                                               </block>
                                             </value>
-                                          </block>
-                                        </value>
-                                        <value name="ADD1">
-                                          <block type="text" id="1~|OU9MM1`eX/VMatk;V">
-                                            <field name="TEXT"> : </field>
-                                          </block>
-                                        </value>
-                                        <value name="ADD2">
-                                          <block type="lists_select_item" id="y2kDkItjGsfYyTrLjl?8">
-                                            <value name="LIST">
-                                              <block type="lexical_variable_get" id="}xz8OC.*W@u}524s1+%*">
-                                                <field name="VAR">item</field>
-                                              </block>
-                                            </value>
-                                            <value name="NUM">
-                                              <block type="math_number" id="N28%VW.MZC[Qw.d3oW*^">
-                                                <field name="NUM">1</field>
+                                            <value name="ADD2">
+                                              <block type="lists_select_item" id="y2kDkItjGsfYyTrLjl?8">
+                                                <value name="LIST">
+                                                  <block type="lexical_variable_get" id="}xz8OC.*W@u}524s1+%*">
+                                                    <field name="VAR">item</field>
+                                                  </block>
+                                                </value>
+                                                <value name="NUM">
+                                                  <block type="math_number" id="N28%VW.MZC[Qw.d3oW*^">
+                                                    <field name="NUM">1</field>
+                                                  </block>
+                                                </value>
                                               </block>
                                             </value>
                                           </block>
@@ -624,21 +631,12 @@ pointer[the index of ListView]={index of subject, index of each homework}
                                       </block>
                                     </value>
                                     <next>
-                                      <block type="procedures_callnoreturn" id="uW?@mC$Kpl_NYDc7xtS_" inline="false">
-                                        <mutation name="addItemsToListView">
-                                          <arg name="item"></arg>
-                                          <arg name="Component"></arg>
-                                        </mutation>
-                                        <field name="PROCNAME">addItemsToListView</field>
+                                      <block type="component_method" id="GHN6GIV|N0No!A@n$wLE">
+                                        <mutation component_type="RichListView" method_name="AddElement" is_generic="false" instance_name="rlvHomework"></mutation>
+                                        <field name="COMPONENT_SELECTOR">rlvHomework</field>
                                         <value name="ARG0">
                                           <block type="lexical_variable_get" id="-4AY9.}5UqfY]l!N;MTP">
                                             <field name="VAR">value</field>
-                                          </block>
-                                        </value>
-                                        <value name="ARG1">
-                                          <block type="component_component_block" id="/4S8?m5xgSt@LDAEBp60">
-                                            <mutation component_type="ListView" instance_name="lvHomework"></mutation>
-                                            <field name="COMPONENT_SELECTOR">lvHomework</field>
                                           </block>
                                         </value>
                                         <next>
@@ -678,45 +676,41 @@ pointer[the index of ListView]={index of subject, index of each homework}
                           <block type="lexical_variable_set" id="t[0@Dh1DPK;0?=:[5ziH">
                             <field name="VAR">value</field>
                             <value name="VALUE">
-                              <block type="text_join" id="Mri({f=%]%*z];`:Cdl|">
-                                <mutation items="2"></mutation>
+                              <block type="lists_create_with" id="AK4q|X]l$VkvXNQLu9*-">
+                                <mutation items="1"></mutation>
                                 <value name="ADD0">
-                                  <block type="lists_select_item" id="F-em2ry;n@:k#p/8u2^Y">
-                                    <value name="LIST">
-                                      <block type="lexical_variable_get" id="Y6g[IO_lcNi#g.,*gk@q">
-                                        <field name="VAR">global subject</field>
+                                  <block type="text_join" id="Mri({f=%]%*z];`:Cdl|">
+                                    <mutation items="2"></mutation>
+                                    <value name="ADD0">
+                                      <block type="lists_select_item" id="F-em2ry;n@:k#p/8u2^Y">
+                                        <value name="LIST">
+                                          <block type="lexical_variable_get" id="Y6g[IO_lcNi#g.,*gk@q">
+                                            <field name="VAR">global subject</field>
+                                          </block>
+                                        </value>
+                                        <value name="NUM">
+                                          <block type="lexical_variable_get" id="raq%I@SKa`I#FWUgXa^z">
+                                            <field name="VAR">i</field>
+                                          </block>
+                                        </value>
                                       </block>
                                     </value>
-                                    <value name="NUM">
-                                      <block type="lexical_variable_get" id="raq%I@SKa`I#FWUgXa^z">
-                                        <field name="VAR">i</field>
+                                    <value name="ADD1">
+                                      <block type="text" id="?,x[V8_GpQ161}p)$_=U">
+                                        <field name="TEXT"> :   ➕ 添加...</field>
                                       </block>
                                     </value>
-                                  </block>
-                                </value>
-                                <value name="ADD1">
-                                  <block type="text" id="?,x[V8_GpQ161}p)$_=U">
-                                    <field name="TEXT"> :  ➕ 添加...</field>
                                   </block>
                                 </value>
                               </block>
                             </value>
                             <next>
-                              <block type="procedures_callnoreturn" id="M*KOGYRPCyuANjK/N`$k" inline="false">
-                                <mutation name="addItemsToListView">
-                                  <arg name="item"></arg>
-                                  <arg name="Component"></arg>
-                                </mutation>
-                                <field name="PROCNAME">addItemsToListView</field>
+                              <block type="component_method" id="KQ:C}M=x:d87P|0TZMdA">
+                                <mutation component_type="RichListView" method_name="AddElement" is_generic="false" instance_name="rlvHomework"></mutation>
+                                <field name="COMPONENT_SELECTOR">rlvHomework</field>
                                 <value name="ARG0">
-                                  <block type="lexical_variable_get" id="4V4rOUe]!}s0w87fMN5Q">
+                                  <block type="lexical_variable_get" id="^PbeTR:GsIl}XHU7KA;*">
                                     <field name="VAR">value</field>
-                                  </block>
-                                </value>
-                                <value name="ARG1">
-                                  <block type="component_component_block" id="eR92~0[!Xk{hZ*g[cLof">
-                                    <mutation component_type="ListView" instance_name="lvHomework"></mutation>
-                                    <field name="COMPONENT_SELECTOR">lvHomework</field>
                                   </block>
                                 </value>
                                 <next>
@@ -815,8 +809,8 @@ pointer[the index of ListView]={index of subject, index of each homework}
                           </block>
                         </value>
                         <value name="DECL1">
-                          <block type="text" id="s=%=uFvg|sq[)GLf7q^b">
-                            <field name="TEXT"></field>
+                          <block type="lists_create_with" id="q,/*gx16cTW6=m7^2ZLT">
+                            <mutation items="0"></mutation>
                           </block>
                         </value>
                         <statement name="STACK">
@@ -838,37 +832,42 @@ pointer[the index of ListView]={index of subject, index of each homework}
                               <block type="lexical_variable_set" id="DhxbG`H`FZ4XTmg*VIWl">
                                 <field name="VAR">value</field>
                                 <value name="VALUE">
-                                  <block type="text_join" id="E*[y/I!J{9Bcp8-LaGXX">
-                                    <mutation items="3"></mutation>
+                                  <block type="lists_create_with" id="]!bA;5ChxX4Yac8@1/G:">
+                                    <mutation items="1"></mutation>
                                     <value name="ADD0">
-                                      <block type="lists_select_item" id="k6E0sqy81)G;:s6]=kCN">
-                                        <value name="LIST">
-                                          <block type="lexical_variable_get" id="BO,p??k|9|9PIcl8(Y@S">
-                                            <field name="VAR">global subject</field>
+                                      <block type="text_join" id="E*[y/I!J{9Bcp8-LaGXX">
+                                        <mutation items="3"></mutation>
+                                        <value name="ADD0">
+                                          <block type="lists_select_item" id="k6E0sqy81)G;:s6]=kCN">
+                                            <value name="LIST">
+                                              <block type="lexical_variable_get" id="BO,p??k|9|9PIcl8(Y@S">
+                                                <field name="VAR">global subject</field>
+                                              </block>
+                                            </value>
+                                            <value name="NUM">
+                                              <block type="math_number" id="!#HCR7.YBchI@x6*tpZ+">
+                                                <field name="NUM">1</field>
+                                              </block>
+                                            </value>
                                           </block>
                                         </value>
-                                        <value name="NUM">
-                                          <block type="math_number" id="!#HCR7.YBchI@x6*tpZ+">
-                                            <field name="NUM">1</field>
+                                        <value name="ADD1">
+                                          <block type="text" id="job,@zHXQ!l[oPI,6*b2">
+                                            <field name="TEXT"> : </field>
                                           </block>
                                         </value>
-                                      </block>
-                                    </value>
-                                    <value name="ADD1">
-                                      <block type="text" id="job,@zHXQ!l[oPI,6*b2">
-                                        <field name="TEXT"> : </field>
-                                      </block>
-                                    </value>
-                                    <value name="ADD2">
-                                      <block type="lists_select_item" id="A/3_$)S?U%dltTEWwP!1">
-                                        <value name="LIST">
-                                          <block type="lexical_variable_get" id="1%E56FAe0+$ywC81NDvz">
-                                            <field name="VAR">item</field>
-                                          </block>
-                                        </value>
-                                        <value name="NUM">
-                                          <block type="math_number" id="mrI$Bc+XTv:hHy7(Q3YD">
-                                            <field name="NUM">1</field>
+                                        <value name="ADD2">
+                                          <block type="lists_select_item" id="A/3_$)S?U%dltTEWwP!1">
+                                            <value name="LIST">
+                                              <block type="lexical_variable_get" id="1%E56FAe0+$ywC81NDvz">
+                                                <field name="VAR">item</field>
+                                              </block>
+                                            </value>
+                                            <value name="NUM">
+                                              <block type="math_number" id="mrI$Bc+XTv:hHy7(Q3YD">
+                                                <field name="NUM">1</field>
+                                              </block>
+                                            </value>
                                           </block>
                                         </value>
                                       </block>
@@ -876,21 +875,12 @@ pointer[the index of ListView]={index of subject, index of each homework}
                                   </block>
                                 </value>
                                 <next>
-                                  <block type="procedures_callnoreturn" id="MIckJh9y8}4N%7bgZBBD" inline="false">
-                                    <mutation name="addItemsToListView">
-                                      <arg name="item"></arg>
-                                      <arg name="Component"></arg>
-                                    </mutation>
-                                    <field name="PROCNAME">addItemsToListView</field>
+                                  <block type="component_method" id="!TdfksiE1g}qqu?=a`j`">
+                                    <mutation component_type="RichListView" method_name="AddElement" is_generic="false" instance_name="rlvHomework"></mutation>
+                                    <field name="COMPONENT_SELECTOR">rlvHomework</field>
                                     <value name="ARG0">
-                                      <block type="lexical_variable_get" id="tduaZm7~v:PC;Itk4Qf|">
+                                      <block type="lexical_variable_get" id="(yl[ub[CspBLQ^`{Z]LW">
                                         <field name="VAR">value</field>
-                                      </block>
-                                    </value>
-                                    <value name="ARG1">
-                                      <block type="component_component_block" id="^f)y14DfB!pVf2p!:pcp">
-                                        <mutation component_type="ListView" instance_name="lvHomework"></mutation>
-                                        <field name="COMPONENT_SELECTOR">lvHomework</field>
                                       </block>
                                     </value>
                                     <next>
@@ -927,40 +917,36 @@ pointer[the index of ListView]={index of subject, index of each homework}
                       </block>
                     </statement>
                     <next>
-                      <block type="procedures_callnoreturn" id="/79ns3|aBy~JcpYoss_C" inline="false">
-                        <mutation name="addItemsToListView">
-                          <arg name="item"></arg>
-                          <arg name="Component"></arg>
-                        </mutation>
-                        <field name="PROCNAME">addItemsToListView</field>
+                      <block type="component_method" id="TAy,`?_rNIp?0]Q`XT?O">
+                        <mutation component_type="RichListView" method_name="AddElement" is_generic="false" instance_name="rlvHomework"></mutation>
+                        <field name="COMPONENT_SELECTOR">rlvHomework</field>
                         <value name="ARG0">
-                          <block type="text_join" id="D*y(5dp}JWt9c.m$hF5F">
-                            <mutation items="2"></mutation>
+                          <block type="lists_create_with" id="T//hQnQ5ambzX4tEwLQ]">
+                            <mutation items="1"></mutation>
                             <value name="ADD0">
-                              <block type="lists_select_item" id="EcWb!|-jzut0jBJgrcJG">
-                                <value name="LIST">
-                                  <block type="lexical_variable_get" id="POSZ+k^mjWko+`AQWMQj">
-                                    <field name="VAR">global subject</field>
+                              <block type="text_join" id="D*y(5dp}JWt9c.m$hF5F">
+                                <mutation items="2"></mutation>
+                                <value name="ADD0">
+                                  <block type="lists_select_item" id="EcWb!|-jzut0jBJgrcJG">
+                                    <value name="LIST">
+                                      <block type="lexical_variable_get" id="POSZ+k^mjWko+`AQWMQj">
+                                        <field name="VAR">global subject</field>
+                                      </block>
+                                    </value>
+                                    <value name="NUM">
+                                      <block type="math_number" id="Q;*O}Rt8]jeT`?mf+:YD">
+                                        <field name="NUM">1</field>
+                                      </block>
+                                    </value>
                                   </block>
                                 </value>
-                                <value name="NUM">
-                                  <block type="math_number" id="Q;*O}Rt8]jeT`?mf+:YD">
-                                    <field name="NUM">1</field>
+                                <value name="ADD1">
+                                  <block type="text" id="}]x%0RU6NtsOPGJyjwF[">
+                                    <field name="TEXT"> :   ➕ 添加...</field>
                                   </block>
                                 </value>
                               </block>
                             </value>
-                            <value name="ADD1">
-                              <block type="text" id="}]x%0RU6NtsOPGJyjwF[">
-                                <field name="TEXT"> :  ➕ 添加...</field>
-                              </block>
-                            </value>
-                          </block>
-                        </value>
-                        <value name="ARG1">
-                          <block type="component_component_block" id="~wi:W=3Tw0y$G%Gkhr-(">
-                            <mutation component_type="ListView" instance_name="lvHomework"></mutation>
-                            <field name="COMPONENT_SELECTOR">lvHomework</field>
                           </block>
                         </value>
                         <next>
@@ -999,7 +985,7 @@ pointer[the index of ListView]={index of subject, index of each homework}
       </block>
     </statement>
   </block>
-  <block type="component_event" id="MD7i]Q0c0xcxWQ-MyLoS" x="-1155" y="-89">
+  <block type="component_event" id="MD7i]Q0c0xcxWQ-MyLoS" x="-1183" y="-75">
     <mutation component_type="Form" instance_name="Modify" event_name="Initialize"></mutation>
     <field name="COMPONENT_SELECTOR">Modify</field>
     <statement name="DO">
@@ -1149,9 +1135,21 @@ pointer[the index of ListView]={index of subject, index of each homework}
                                 <mutation name="getPositions"></mutation>
                                 <field name="PROCNAME">getPositions</field>
                                 <next>
-                                  <block type="procedures_callnoreturn" id="5MNVvml^R5xQpKkVG~nE" inline="false">
-                                    <mutation name="getItems"></mutation>
-                                    <field name="PROCNAME">getItems</field>
+                                  <block type="component_method" id="=C^)~P!RlNLC=|$@F!jr">
+                                    <mutation component_type="RichListView" method_name="Initialize_Scroll" is_generic="false" instance_name="rlvHomework"></mutation>
+                                    <field name="COMPONENT_SELECTOR">rlvHomework</field>
+                                    <value name="ARG0">
+                                      <block type="component_component_block" id="ba:,n{dBJo}62N=y0ecN">
+                                        <mutation component_type="VerticalScrollArrangement" instance_name="rlvgHomework"></mutation>
+                                        <field name="COMPONENT_SELECTOR">rlvgHomework</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="procedures_callnoreturn" id="5MNVvml^R5xQpKkVG~nE" inline="false">
+                                        <mutation name="getItems"></mutation>
+                                        <field name="PROCNAME">getItems</field>
+                                      </block>
+                                    </next>
                                   </block>
                                 </next>
                               </block>
@@ -1299,10 +1297,73 @@ pointer[the index of ListView]={index of subject, index of each homework}
       </block>
     </statement>
   </block>
-  <block type="component_event" id="D;ZTy0pG9YO,oO[zVvWp" x="-1154" y="686">
-    <mutation component_type="ListView" instance_name="lvHomework" event_name="AfterPicking"></mutation>
-    <field name="COMPONENT_SELECTOR">lvHomework</field>
+  <block type="component_event" id="naRy3/N~vPxsMWan0G8e" x="-1198" y="604">
+    <mutation component_type="RichListView" instance_name="rlvHomework" event_name="IconClick"></mutation>
+    <field name="COMPONENT_SELECTOR">rlvHomework</field>
     <statement name="DO">
+      <block type="lexical_variable_set" id="|+(A`T8*w%b6-Dz{gP3(">
+        <field name="VAR">global selection</field>
+        <value name="VALUE">
+          <block type="lexical_variable_get" id="|{|EK_%$k@(QqNpGAjGP">
+            <mutation>
+              <eventparam name="elementIndex"></eventparam>
+            </mutation>
+            <field name="VAR">elementIndex</field>
+          </block>
+        </value>
+        <next>
+          <block type="procedures_callnoreturn" id="-q6t!W=Y=u,FB*0CLvdP" inline="false">
+            <mutation name="itemClick">
+              <arg name="index"></arg>
+            </mutation>
+            <field name="PROCNAME">itemClick</field>
+            <value name="ARG0">
+              <block type="lexical_variable_get" id="Bp~2.%_qo_!hNe:-?,@Y">
+                <field name="VAR">global selection</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="%fBNv?fO^ZGCk_OBZ]t#" x="-704" y="604">
+    <mutation component_type="RichListView" instance_name="rlvHomework" event_name="ElementClick"></mutation>
+    <field name="COMPONENT_SELECTOR">rlvHomework</field>
+    <statement name="DO">
+      <block type="lexical_variable_set" id="4`|%p!f-m:X?U51=)inR">
+        <field name="VAR">global selection</field>
+        <value name="VALUE">
+          <block type="lexical_variable_get" id="/Wk.c92,+Sr=w8_tmh_L">
+            <mutation>
+              <eventparam name="elementIndex"></eventparam>
+            </mutation>
+            <field name="VAR">elementIndex</field>
+          </block>
+        </value>
+        <next>
+          <block type="procedures_callnoreturn" id="3nn!0S*!:gVOlq^EHJ`b" inline="false">
+            <mutation name="itemClick">
+              <arg name="index"></arg>
+            </mutation>
+            <field name="PROCNAME">itemClick</field>
+            <value name="ARG0">
+              <block type="lexical_variable_get" id="FyCs;-+^O$W-yY*M?(xX">
+                <field name="VAR">global selection</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="-!orFXs-JB]?!*AM3d|X" x="-1188" y="790">
+    <mutation>
+      <arg name="index"></arg>
+    </mutation>
+    <field name="NAME">itemClick</field>
+    <field name="VAR0">index</field>
+    <statement name="STACK">
       <block type="controls_if" id="uw/Fh~725]]YKGf+Zmom">
         <value name="IF0">
           <block type="logic_compare" id="szj2LW`ku,?-}(}xU=6z">
@@ -1317,10 +1378,8 @@ pointer[the index of ListView]={index of subject, index of each homework}
                       </block>
                     </value>
                     <value name="NUM">
-                      <block type="component_set_get" id="sz{[[ao$=~o-*,T(NI%f">
-                        <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvHomework"></mutation>
-                        <field name="COMPONENT_SELECTOR">lvHomework</field>
-                        <field name="PROP">SelectionIndex</field>
+                      <block type="lexical_variable_get" id="Rl_]4wqExI!Y%[J8nScr">
+                        <field name="VAR">index</field>
                       </block>
                     </value>
                   </block>
@@ -1362,10 +1421,8 @@ pointer[the index of ListView]={index of subject, index of each homework}
                       </block>
                     </value>
                     <value name="NUM">
-                      <block type="component_set_get" id="+4GUFPny{WvcwsSS_s_l">
-                        <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvHomework"></mutation>
-                        <field name="COMPONENT_SELECTOR">lvHomework</field>
-                        <field name="PROP">SelectionIndex</field>
+                      <block type="lexical_variable_get" id="@xx|y].C=x08Q}gqE2H9">
+                        <field name="VAR">index</field>
                       </block>
                     </value>
                   </block>
@@ -1478,10 +1535,8 @@ pointer[the index of ListView]={index of subject, index of each homework}
                                       </block>
                                     </value>
                                     <value name="NUM">
-                                      <block type="component_set_get" id="(sZ[.{PhEwy/FSr|%WL8">
-                                        <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvHomework"></mutation>
-                                        <field name="COMPONENT_SELECTOR">lvHomework</field>
-                                        <field name="PROP">SelectionIndex</field>
+                                      <block type="lexical_variable_get" id="L9jm)pG)MUuNncY(X/J{">
+                                        <field name="VAR">index</field>
                                       </block>
                                     </value>
                                   </block>
@@ -1505,10 +1560,8 @@ pointer[the index of ListView]={index of subject, index of each homework}
                                   </block>
                                 </value>
                                 <value name="NUM">
-                                  <block type="component_set_get" id="xA7u8e.sr-xnZAM|U?,l">
-                                    <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvHomework"></mutation>
-                                    <field name="COMPONENT_SELECTOR">lvHomework</field>
-                                    <field name="PROP">SelectionIndex</field>
+                                  <block type="lexical_variable_get" id="n~:lW,G23Obz018TBe^V">
+                                    <field name="VAR">index</field>
                                   </block>
                                 </value>
                               </block>
@@ -1534,12 +1587,9 @@ pointer[the index of ListView]={index of subject, index of each homework}
                     <mutation component_type="TextBox" method_name="RequestFocus" is_generic="false" instance_name="tbInput"></mutation>
                     <field name="COMPONENT_SELECTOR">tbInput</field>
                     <next>
-                      <block type="procedures_callnoreturn" id="Q0k!`JbKFWOuQN^v)*?R" inline="false">
-                        <mutation name="drawTag">
-                          <arg name="subjectIndex"></arg>
-                        </mutation>
-                        <field name="PROCNAME">drawTag</field>
-                        <value name="ARG0">
+                      <block type="lexical_variable_set" id="68al59Nr*/6TBYdY)jAz">
+                        <field name="VAR">global subjectIndex</field>
+                        <value name="VALUE">
                           <block type="lists_select_item" id="c;qu/,`-8rG[d;ioB82a">
                             <value name="LIST">
                               <block type="lists_select_item" id="9GZ|o/:0%t=PgX*rrGAE">
@@ -1549,10 +1599,8 @@ pointer[the index of ListView]={index of subject, index of each homework}
                                   </block>
                                 </value>
                                 <value name="NUM">
-                                  <block type="component_set_get" id="`g2^~,IrS]FqOlAA?;%W">
-                                    <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvHomework"></mutation>
-                                    <field name="COMPONENT_SELECTOR">lvHomework</field>
-                                    <field name="PROP">SelectionIndex</field>
+                                  <block type="lexical_variable_get" id="#K~6vX6E{c;-IPvz}C*M">
+                                    <field name="VAR">index</field>
                                   </block>
                                 </value>
                               </block>
@@ -1564,6 +1612,12 @@ pointer[the index of ListView]={index of subject, index of each homework}
                             </value>
                           </block>
                         </value>
+                        <next>
+                          <block type="procedures_callnoreturn" id="Q0k!`JbKFWOuQN^v)*?R" inline="false">
+                            <mutation name="drawTag"></mutation>
+                            <field name="PROCNAME">drawTag</field>
+                          </block>
+                        </next>
                       </block>
                     </next>
                   </block>
@@ -1720,7 +1774,7 @@ pointer[the index of ListView]={index of subject, index of each homework}
       </block>
     </statement>
   </block>
-  <block type="component_event" id="%y~mDqnLU*#?`[~fc)nO" x="-1149" y="1564">
+  <block type="component_event" id="%y~mDqnLU*#?`[~fc)nO" x="-1213" y="1636">
     <mutation component_type="Button" instance_name="btnInput" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">btnInput</field>
     <statement name="DO">
@@ -1748,10 +1802,8 @@ pointer[the index of ListView]={index of subject, index of each homework}
                   </block>
                 </value>
                 <value name="NUM">
-                  <block type="component_set_get" id="t3tTaiyUIMmqL?1ARq8|">
-                    <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvHomework"></mutation>
-                    <field name="COMPONENT_SELECTOR">lvHomework</field>
-                    <field name="PROP">SelectionIndex</field>
+                  <block type="lexical_variable_get" id="Z)YP2)R;,u*tG=A*2#_R">
+                    <field name="VAR">global selection</field>
                   </block>
                 </value>
               </block>
@@ -1773,10 +1825,8 @@ pointer[the index of ListView]={index of subject, index of each homework}
                   </block>
                 </value>
                 <value name="NUM">
-                  <block type="component_set_get" id="IVeVax]S9$GYZ]J:K.J|">
-                    <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvHomework"></mutation>
-                    <field name="COMPONENT_SELECTOR">lvHomework</field>
-                    <field name="PROP">SelectionIndex</field>
+                  <block type="lexical_variable_get" id="cb@[gxfk04NW#$-vL+uw">
+                    <field name="VAR">global selection</field>
                   </block>
                 </value>
               </block>
@@ -1956,10 +2006,8 @@ pointer[the index of ListView]={index of subject, index of each homework}
                   </block>
                 </value>
                 <value name="NUM">
-                  <block type="component_set_get" id="{]qM?g^gD}_i/Mf|#xg8">
-                    <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvHomework"></mutation>
-                    <field name="COMPONENT_SELECTOR">lvHomework</field>
-                    <field name="PROP">SelectionIndex</field>
+                  <block type="lexical_variable_get" id="5$ir|823`$-^8Mai2)tZ">
+                    <field name="VAR">global selection</field>
                   </block>
                 </value>
               </block>
@@ -1981,10 +2029,8 @@ pointer[the index of ListView]={index of subject, index of each homework}
                   </block>
                 </value>
                 <value name="NUM">
-                  <block type="component_set_get" id="g}bB2+mV#(xkq[PH$k(?">
-                    <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvHomework"></mutation>
-                    <field name="COMPONENT_SELECTOR">lvHomework</field>
-                    <field name="PROP">SelectionIndex</field>
+                  <block type="lexical_variable_get" id="J9cfzZ?5jAA5Yk(ilbj.">
+                    <field name="VAR">global selection</field>
                   </block>
                 </value>
               </block>
@@ -2171,17 +2217,13 @@ pointer[the index of ListView]={index of subject, index of each homework}
                         <mutation name="getItems"></mutation>
                         <field name="PROCNAME">getItems</field>
                         <next>
-                          <block type="component_set_get" id="hF3iRpdcsPFo}i+^sc(H">
-                            <mutation component_type="ListView" set_or_get="set" property_name="SelectionIndex" is_generic="false" instance_name="lvHomework"></mutation>
-                            <field name="COMPONENT_SELECTOR">lvHomework</field>
-                            <field name="PROP">SelectionIndex</field>
+                          <block type="lexical_variable_set" id="57M1ma+e_`65bK}vbmrv">
+                            <field name="VAR">global selection</field>
                             <value name="VALUE">
                               <block type="math_subtract" id="D+WF:s,wy*NB{~G^/|9@">
                                 <value name="A">
-                                  <block type="component_set_get" id="!K=ef#Pyj8(0$G50eu|M">
-                                    <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvHomework"></mutation>
-                                    <field name="COMPONENT_SELECTOR">lvHomework</field>
-                                    <field name="PROP">SelectionIndex</field>
+                                  <block type="lexical_variable_get" id="w7N:Ms@CTVQl/D$R^owP">
+                                    <field name="VAR">global selection</field>
                                   </block>
                                 </value>
                                 <value name="B">
@@ -2204,7 +2246,7 @@ pointer[the index of ListView]={index of subject, index of each homework}
       </block>
     </statement>
   </block>
-  <block type="component_event" id="nOdab=1I%6j[mW#4WDmd" x="1683" y="1579">
+  <block type="component_event" id="nOdab=1I%6j[mW#4WDmd" x="1840" y="1587">
     <mutation component_type="Button" instance_name="btnDown" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">btnDown</field>
     <statement name="DO">
@@ -2232,10 +2274,8 @@ pointer[the index of ListView]={index of subject, index of each homework}
                   </block>
                 </value>
                 <value name="NUM">
-                  <block type="component_set_get" id="/,@/tw)W+Pu]PEU_RyaG">
-                    <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvHomework"></mutation>
-                    <field name="COMPONENT_SELECTOR">lvHomework</field>
-                    <field name="PROP">SelectionIndex</field>
+                  <block type="lexical_variable_get" id="jLV-pp](PNrfo!FY2#Pz">
+                    <field name="VAR">global selection</field>
                   </block>
                 </value>
               </block>
@@ -2257,10 +2297,8 @@ pointer[the index of ListView]={index of subject, index of each homework}
                   </block>
                 </value>
                 <value name="NUM">
-                  <block type="component_set_get" id=":Ibr[+Mng0E32dWT)riH">
-                    <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvHomework"></mutation>
-                    <field name="COMPONENT_SELECTOR">lvHomework</field>
-                    <field name="PROP">SelectionIndex</field>
+                  <block type="lexical_variable_get" id="`4roBqf/HXK=^+tDrYb#">
+                    <field name="VAR">global selection</field>
                   </block>
                 </value>
               </block>
@@ -2462,18 +2500,14 @@ pointer[the index of ListView]={index of subject, index of each homework}
                         <mutation name="getItems"></mutation>
                         <field name="PROCNAME">getItems</field>
                         <next>
-                          <block type="component_set_get" id="fK`tPk:)H8B3v;%14eJ_">
-                            <mutation component_type="ListView" set_or_get="set" property_name="SelectionIndex" is_generic="false" instance_name="lvHomework"></mutation>
-                            <field name="COMPONENT_SELECTOR">lvHomework</field>
-                            <field name="PROP">SelectionIndex</field>
+                          <block type="lexical_variable_set" id="P!;t|)|H{!]c[(/Z=|{{">
+                            <field name="VAR">global selection</field>
                             <value name="VALUE">
                               <block type="math_add" id="9Mz[lgXrTc)emZMYua6D">
                                 <mutation items="2"></mutation>
                                 <value name="NUM0">
-                                  <block type="component_set_get" id="*E]:=2XO;^oO5qv)H1YT">
-                                    <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvHomework"></mutation>
-                                    <field name="COMPONENT_SELECTOR">lvHomework</field>
-                                    <field name="PROP">SelectionIndex</field>
+                                  <block type="lexical_variable_get" id="R}B0y7:#j4SAY}^m{I.C">
+                                    <field name="VAR">global selection</field>
                                   </block>
                                 </value>
                                 <value name="NUM1">
@@ -2496,7 +2530,7 @@ pointer[the index of ListView]={index of subject, index of each homework}
       </block>
     </statement>
   </block>
-  <block type="component_event" id="ZQ2EKabvBtZQN~:C.d~!" x="-167" y="1830">
+  <block type="component_event" id="ZQ2EKabvBtZQN~:C.d~!" x="-179" y="1840">
     <mutation component_type="Button" instance_name="btnDel" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">btnDel</field>
     <statement name="DO">
@@ -2522,10 +2556,8 @@ pointer[the index of ListView]={index of subject, index of each homework}
                   </block>
                 </value>
                 <value name="NUM">
-                  <block type="component_set_get" id="+,({dSky5BBcr{B8ehpM">
-                    <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvHomework"></mutation>
-                    <field name="COMPONENT_SELECTOR">lvHomework</field>
-                    <field name="PROP">SelectionIndex</field>
+                  <block type="lexical_variable_get" id="yiTo@{!Yfy2r6iqWrqCL">
+                    <field name="VAR">global selection</field>
                   </block>
                 </value>
               </block>
@@ -2574,10 +2606,8 @@ pointer[the index of ListView]={index of subject, index of each homework}
                           </block>
                         </value>
                         <value name="NUM">
-                          <block type="component_set_get" id=",S^S%n#.[4%P[V#NJLsb">
-                            <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvHomework"></mutation>
-                            <field name="COMPONENT_SELECTOR">lvHomework</field>
-                            <field name="PROP">SelectionIndex</field>
+                          <block type="lexical_variable_get" id="eA)]lD`2LpIi$`hs4HbI">
+                            <field name="VAR">global selection</field>
                           </block>
                         </value>
                       </block>
@@ -2649,7 +2679,23 @@ pointer[the index of ListView]={index of subject, index of each homework}
       </block>
     </statement>
   </block>
-  <block type="component_event" id="cu6JP.9EW{_!b0+(x;89" x="-745" y="2202">
+  <block type="global_declaration" id="8}7lT|~|52Yf.8xg~:=U" x="-1174" y="2400">
+    <field name="NAME">lsPos</field>
+    <value name="VALUE">
+      <block type="lists_create_with" id="%$Q`w$EA#C3FxLs-QV1H">
+        <mutation items="0"></mutation>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="R/daU)?*-tj_zRfmw:Tn" x="-1174" y="2440">
+    <field name="NAME">lsTag</field>
+    <value name="VALUE">
+      <block type="lists_create_with" id="$g^COz6UXGc|!){a;bP}">
+        <mutation items="0"></mutation>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" id="cu6JP.9EW{_!b0+(x;89" x="-182" y="2396">
     <mutation component_type="Button" instance_name="btnTag" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">btnTag</field>
     <statement name="DO">
@@ -2707,28 +2753,16 @@ pointer[the index of ListView]={index of subject, index of each homework}
       </block>
     </statement>
   </block>
-  <block type="global_declaration" id="8}7lT|~|52Yf.8xg~:=U" x="-1174" y="2400">
-    <field name="NAME">lsPos</field>
+  <block type="global_declaration" id="=!/Et+*yH$wGj*w!Vac=" x="-1178" y="2512">
+    <field name="NAME">subjectIndex</field>
     <value name="VALUE">
-      <block type="lists_create_with" id="%$Q`w$EA#C3FxLs-QV1H">
-        <mutation items="0"></mutation>
+      <block type="math_number" id="5vVTs%IPf!PbTWczZIGe">
+        <field name="NUM">0</field>
       </block>
     </value>
   </block>
-  <block type="global_declaration" id="R/daU)?*-tj_zRfmw:Tn" x="-1174" y="2440">
-    <field name="NAME">lsTag</field>
-    <value name="VALUE">
-      <block type="lists_create_with" id="$g^COz6UXGc|!){a;bP}">
-        <mutation items="0"></mutation>
-      </block>
-    </value>
-  </block>
-  <block type="procedures_defnoreturn" id="jbeOBpEft!%[5=:A^Fk[" x="-1175" y="2486">
-    <mutation>
-      <arg name="subjectIndex"></arg>
-    </mutation>
+  <block type="procedures_defnoreturn" id="jbeOBpEft!%[5=:A^Fk[" x="-1213" y="2629">
     <field name="NAME">drawTag</field>
-    <field name="VAR0">subjectIndex</field>
     <statement name="STACK">
       <block type="local_declaration_statement" id="Eil=Uq`LCSDw_c54UR[u">
         <mutation>
@@ -2746,7 +2780,7 @@ pointer[the index of ListView]={index of subject, index of each homework}
             </value>
             <value name="NUM">
               <block type="lexical_variable_get" id="2o$8G_3X7#=c0+*:XNxa">
-                <field name="VAR">subjectIndex</field>
+                <field name="VAR">global subjectIndex</field>
               </block>
             </value>
           </block>
@@ -2760,7 +2794,7 @@ pointer[the index of ListView]={index of subject, index of each homework}
             </value>
             <value name="NUM">
               <block type="lexical_variable_get" id="*y-L=A=yAi=Dd7/VQn=L">
-                <field name="VAR">subjectIndex</field>
+                <field name="VAR">global subjectIndex</field>
               </block>
             </value>
           </block>
@@ -3028,7 +3062,7 @@ pointer[the index of ListView]={index of subject, index of each homework}
       </block>
     </statement>
   </block>
-  <block type="procedures_defnoreturn" id="Hz^=[-8yAM+Par5!EJ;G" x="-154" y="2784">
+  <block type="procedures_defnoreturn" id="Hz^=[-8yAM+Par5!EJ;G" x="-98" y="2727">
     <field name="NAME">getPositions</field>
     <statement name="STACK">
       <block type="component_method" id="kVMhEOvg+S+GA5j{y,uQ">
@@ -3377,247 +3411,285 @@ pointer[the index of ListView]={index of subject, index of each homework}
       </block>
     </statement>
   </block>
-  <block type="component_event" id="5:d{Z1qoGVL7:9|s1CpK" x="-158" y="3703">
+  <block type="component_event" id="5:d{Z1qoGVL7:9|s1CpK" x="-130" y="3785">
     <mutation component_type="Canvas" instance_name="cvTag" event_name="Touched"></mutation>
     <field name="COMPONENT_SELECTOR">cvTag</field>
     <statement name="DO">
-      <block type="controls_forRange" id="C97TSD@+7R_U#KXae/*L">
-        <field name="VAR">i</field>
-        <value name="START">
-          <block type="math_number" id="E#zmT@?|{OaFIO0m,PH)">
-            <field name="NUM">1</field>
+      <block type="local_declaration_statement" id="3ZOw!_br-2,AS^M#O36J">
+        <mutation>
+          <localname name="lsSinglePos"></localname>
+          <localname name="lsSingleTag"></localname>
+        </mutation>
+        <field name="VAR0">lsSinglePos</field>
+        <field name="VAR1">lsSingleTag</field>
+        <value name="DECL0">
+          <block type="lists_select_item" id="9H7fz8_y6}Fv/H@C#RDk">
+            <value name="LIST">
+              <block type="lexical_variable_get" id="-g1w?MFo/v]Afl3C@%(U">
+                <field name="VAR">global lsPos</field>
+              </block>
+            </value>
+            <value name="NUM">
+              <block type="lexical_variable_get" id="wZhuQ*-gN[d}7m_gZ.PO">
+                <field name="VAR">global subjectIndex</field>
+              </block>
+            </value>
           </block>
         </value>
-        <value name="END">
-          <block type="lists_length" id="p9%Lglra|c4qNy#oC6jk">
+        <value name="DECL1">
+          <block type="lists_select_item" id="$@==H]@M7~ANwH|)!h5M">
             <value name="LIST">
-              <block type="lexical_variable_get" id="GH2m3)$-^Dk#y3`c{8+B">
+              <block type="lexical_variable_get" id="D3:[9w8ErOzBPm1I4~;1">
                 <field name="VAR">global lsTag</field>
               </block>
             </value>
+            <value name="NUM">
+              <block type="lexical_variable_get" id="Lyr_AR,;wAx+~Mmr6At)">
+                <field name="VAR">global subjectIndex</field>
+              </block>
+            </value>
           </block>
         </value>
-        <value name="STEP">
-          <block type="math_number" id="vl$Vi(=P3YCuIE#$j|PU">
-            <field name="NUM">1</field>
-          </block>
-        </value>
-        <statement name="DO">
-          <block type="controls_if" id="X!~CZx=3s1_5.6a@2Ew(">
-            <value name="IF0">
-              <block type="logic_operation" id="hmJAes}]`4WEagbt%[U^">
-                <field name="OP">AND</field>
-                <value name="A">
-                  <block type="logic_operation" id="lFN]s[0w+]m7PdmqcEP]">
-                    <field name="OP">AND</field>
-                    <value name="A">
-                      <block type="math_compare" id=",L^4(Q~L?42Z_h!rmGcV">
-                        <field name="OP">GTE</field>
-                        <value name="A">
-                          <block type="lexical_variable_get" id="k[fI!oz)rNH(f9NFLC3`">
-                            <mutation>
-                              <eventparam name="x"></eventparam>
-                            </mutation>
-                            <field name="VAR">x</field>
-                          </block>
-                        </value>
-                        <value name="B">
-                          <block type="lists_select_item" id="{*)@DEQFAJpS^Rd+Z;?^">
-                            <value name="LIST">
-                              <block type="lists_select_item" id="ZVL7+!9G^U#ICMjiS@]|">
-                                <value name="LIST">
-                                  <block type="lexical_variable_get" id="Ja/JAQcdZ+s4svjga4o0">
-                                    <field name="VAR">global lsPos</field>
-                                  </block>
-                                </value>
-                                <value name="NUM">
-                                  <block type="lexical_variable_get" id="_SxA:Mxk1r:2DzSblq+Z">
-                                    <field name="VAR">i</field>
-                                  </block>
-                                </value>
-                              </block>
-                            </value>
-                            <value name="NUM">
-                              <block type="math_number" id="S[}Q3vc4#QX**@8)QH;.">
-                                <field name="NUM">1</field>
-                              </block>
-                            </value>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <block type="math_compare" id="Eme;^iWUHK2,7QxW|gkL">
-                        <field name="OP">LTE</field>
-                        <value name="A">
-                          <block type="lexical_variable_get" id="g_Bpv4y`6sc[tGfjGp1R">
-                            <mutation>
-                              <eventparam name="x"></eventparam>
-                            </mutation>
-                            <field name="VAR">x</field>
-                          </block>
-                        </value>
-                        <value name="B">
-                          <block type="lists_select_item" id="}xN5}PylHh^}@y.UZ=L;">
-                            <value name="LIST">
-                              <block type="lists_select_item" id="?.euw[n%GcQ`uYCY,k1v">
-                                <value name="LIST">
-                                  <block type="lexical_variable_get" id="]qq;cW}p~O7|._,E,Qp0">
-                                    <field name="VAR">global lsPos</field>
-                                  </block>
-                                </value>
-                                <value name="NUM">
-                                  <block type="lexical_variable_get" id="6sK!I8W=[jdZqMQAGl@^">
-                                    <field name="VAR">i</field>
-                                  </block>
-                                </value>
-                              </block>
-                            </value>
-                            <value name="NUM">
-                              <block type="math_number" id="/SzPD!;xX_3Wg;a@`Y6h">
-                                <field name="NUM">3</field>
-                              </block>
-                            </value>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                  </block>
-                </value>
-                <value name="B">
-                  <block type="logic_operation" id="Q5(;oo%oEkM?(GPTs;xt">
-                    <field name="OP">AND</field>
-                    <value name="A">
-                      <block type="math_compare" id="c_*0bUAFwxK[P5:4%gpq">
-                        <field name="OP">GTE</field>
-                        <value name="A">
-                          <block type="lexical_variable_get" id="(7v40E?$k#3T!u(2htJk">
-                            <mutation>
-                              <eventparam name="y"></eventparam>
-                            </mutation>
-                            <field name="VAR">y</field>
-                          </block>
-                        </value>
-                        <value name="B">
-                          <block type="math_subtract" id="8o1x3!XMqa]Yjt8}i6I?">
-                            <value name="A">
-                              <block type="lists_select_item" id="AyaJ()+`SG~R?1}p/Gp;">
-                                <value name="LIST">
-                                  <block type="lists_select_item" id="mvN6;UK@C6J`;hseB[AM">
-                                    <value name="LIST">
-                                      <block type="lexical_variable_get" id="67b:NO|Y8q`N;g4$Wk3m">
-                                        <field name="VAR">global lsPos</field>
-                                      </block>
-                                    </value>
-                                    <value name="NUM">
-                                      <block type="lexical_variable_get" id=".{xjZRG+nN,H40BC.G]{">
-                                        <field name="VAR">i</field>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </value>
-                                <value name="NUM">
-                                  <block type="math_number" id="8{xpp-sU?Fy}52XIn!6i">
-                                    <field name="NUM">2</field>
-                                  </block>
-                                </value>
-                              </block>
-                            </value>
-                            <value name="B">
-                              <block type="math_number" id="sxN=P+gh#A8e9@*^[IE`">
-                                <field name="NUM">15</field>
-                              </block>
-                            </value>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <block type="math_compare" id="s]e{WUpF|,e[g;NdX1*a">
-                        <field name="OP">LTE</field>
-                        <value name="A">
-                          <block type="lexical_variable_get" id="+G|rw|fEXZ8ueq,N:W/9">
-                            <mutation>
-                              <eventparam name="y"></eventparam>
-                            </mutation>
-                            <field name="VAR">y</field>
-                          </block>
-                        </value>
-                        <value name="B">
-                          <block type="math_add" id="*BXfX!.@a2;@nC5h4and">
-                            <mutation items="2"></mutation>
-                            <value name="NUM0">
-                              <block type="lists_select_item" id="7gBxODO):_o4lwlZGX5.">
-                                <value name="LIST">
-                                  <block type="lists_select_item" id="(FpCd%3T:a0f}WWo[~P#">
-                                    <value name="LIST">
-                                      <block type="lexical_variable_get" id="_k,Tbl;lGNizT8F}kV,#">
-                                        <field name="VAR">global lsPos</field>
-                                      </block>
-                                    </value>
-                                    <value name="NUM">
-                                      <block type="lexical_variable_get" id="H||-:Zc?e2YvL*_qeZO*">
-                                        <field name="VAR">i</field>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </value>
-                                <value name="NUM">
-                                  <block type="math_number" id="koI]9W2]KZ5uTee{Ib)`">
-                                    <field name="NUM">2</field>
-                                  </block>
-                                </value>
-                              </block>
-                            </value>
-                            <value name="NUM1">
-                              <block type="math_number" id="vIa[S;7v.i/3q_t25!8.">
-                                <field name="NUM">1</field>
-                              </block>
-                            </value>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
+        <statement name="STACK">
+          <block type="controls_forRange" id="C97TSD@+7R_U#KXae/*L">
+            <field name="VAR">i</field>
+            <value name="START">
+              <block type="math_number" id="E#zmT@?|{OaFIO0m,PH)">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <value name="END">
+              <block type="lists_length" id="p9%Lglra|c4qNy#oC6jk">
+                <value name="LIST">
+                  <block type="lexical_variable_get" id="GH2m3)$-^Dk#y3`c{8+B">
+                    <field name="VAR">lsSingleTag</field>
                   </block>
                 </value>
               </block>
             </value>
-            <statement name="DO0">
-              <block type="component_set_get" id="U]/Y{WLdi$$3]{e2WNj.">
-                <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="tbInput"></mutation>
-                <field name="COMPONENT_SELECTOR">tbInput</field>
-                <field name="PROP">Text</field>
-                <value name="VALUE">
-                  <block type="text_join" id="[xY(Pjrl0)Peq@.YP!;M">
-                    <mutation items="3"></mutation>
-                    <value name="ADD0">
-                      <block type="component_set_get" id="es}l]G{n4R~]aO-|_1HV">
-                        <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="tbInput"></mutation>
-                        <field name="COMPONENT_SELECTOR">tbInput</field>
-                        <field name="PROP">Text</field>
-                      </block>
-                    </value>
-                    <value name="ADD1">
-                      <block type="lists_select_item" id="f{;j)g|RyJ((N85sTTXq">
-                        <value name="LIST">
-                          <block type="lexical_variable_get" id="]eBM3ZlmK8c*m~l!Bra[">
-                            <field name="VAR">global lsTag</field>
+            <value name="STEP">
+              <block type="math_number" id="vl$Vi(=P3YCuIE#$j|PU">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="controls_if" id="X!~CZx=3s1_5.6a@2Ew(">
+                <value name="IF0">
+                  <block type="logic_operation" id="hmJAes}]`4WEagbt%[U^">
+                    <field name="OP">AND</field>
+                    <value name="A">
+                      <block type="logic_operation" id="lFN]s[0w+]m7PdmqcEP]">
+                        <field name="OP">AND</field>
+                        <value name="A">
+                          <block type="math_compare" id=",L^4(Q~L?42Z_h!rmGcV">
+                            <field name="OP">GTE</field>
+                            <value name="A">
+                              <block type="lexical_variable_get" id="k[fI!oz)rNH(f9NFLC3`">
+                                <mutation>
+                                  <eventparam name="x"></eventparam>
+                                </mutation>
+                                <field name="VAR">x</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="lists_select_item" id="{*)@DEQFAJpS^Rd+Z;?^">
+                                <value name="LIST">
+                                  <block type="lists_select_item" id="ZVL7+!9G^U#ICMjiS@]|">
+                                    <value name="LIST">
+                                      <block type="lexical_variable_get" id="Ja/JAQcdZ+s4svjga4o0">
+                                        <field name="VAR">lsSinglePos</field>
+                                      </block>
+                                    </value>
+                                    <value name="NUM">
+                                      <block type="lexical_variable_get" id="_SxA:Mxk1r:2DzSblq+Z">
+                                        <field name="VAR">i</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="NUM">
+                                  <block type="math_number" id="S[}Q3vc4#QX**@8)QH;.">
+                                    <field name="NUM">1</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
                           </block>
                         </value>
-                        <value name="NUM">
-                          <block type="lexical_variable_get" id="+B/ao^PBHEMFfTMr.NR}">
-                            <field name="VAR">i</field>
+                        <value name="B">
+                          <block type="math_compare" id="Eme;^iWUHK2,7QxW|gkL">
+                            <field name="OP">LTE</field>
+                            <value name="A">
+                              <block type="lexical_variable_get" id="g_Bpv4y`6sc[tGfjGp1R">
+                                <mutation>
+                                  <eventparam name="x"></eventparam>
+                                </mutation>
+                                <field name="VAR">x</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="lists_select_item" id="}xN5}PylHh^}@y.UZ=L;">
+                                <value name="LIST">
+                                  <block type="lists_select_item" id="?.euw[n%GcQ`uYCY,k1v">
+                                    <value name="LIST">
+                                      <block type="lexical_variable_get" id="]qq;cW}p~O7|._,E,Qp0">
+                                        <field name="VAR">lsSinglePos</field>
+                                      </block>
+                                    </value>
+                                    <value name="NUM">
+                                      <block type="lexical_variable_get" id="6sK!I8W=[jdZqMQAGl@^">
+                                        <field name="VAR">i</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="NUM">
+                                  <block type="math_number" id="/SzPD!;xX_3Wg;a@`Y6h">
+                                    <field name="NUM">3</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
                           </block>
                         </value>
                       </block>
                     </value>
-                    <value name="ADD2">
-                      <block type="text" id="]z]VNAf#q)yS}}}%%ksR">
-                        <field name="TEXT"> </field>
+                    <value name="B">
+                      <block type="logic_operation" id="Q5(;oo%oEkM?(GPTs;xt">
+                        <field name="OP">AND</field>
+                        <value name="A">
+                          <block type="math_compare" id="c_*0bUAFwxK[P5:4%gpq">
+                            <field name="OP">GTE</field>
+                            <value name="A">
+                              <block type="lexical_variable_get" id="(7v40E?$k#3T!u(2htJk">
+                                <mutation>
+                                  <eventparam name="y"></eventparam>
+                                </mutation>
+                                <field name="VAR">y</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_subtract" id="8o1x3!XMqa]Yjt8}i6I?">
+                                <value name="A">
+                                  <block type="lists_select_item" id="AyaJ()+`SG~R?1}p/Gp;">
+                                    <value name="LIST">
+                                      <block type="lists_select_item" id="mvN6;UK@C6J`;hseB[AM">
+                                        <value name="LIST">
+                                          <block type="lexical_variable_get" id="67b:NO|Y8q`N;g4$Wk3m">
+                                            <field name="VAR">lsSinglePos</field>
+                                          </block>
+                                        </value>
+                                        <value name="NUM">
+                                          <block type="lexical_variable_get" id=".{xjZRG+nN,H40BC.G]{">
+                                            <field name="VAR">i</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="NUM">
+                                      <block type="math_number" id="8{xpp-sU?Fy}52XIn!6i">
+                                        <field name="NUM">2</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="math_number" id="sxN=P+gh#A8e9@*^[IE`">
+                                    <field name="NUM">15</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_compare" id="s]e{WUpF|,e[g;NdX1*a">
+                            <field name="OP">LTE</field>
+                            <value name="A">
+                              <block type="lexical_variable_get" id="+G|rw|fEXZ8ueq,N:W/9">
+                                <mutation>
+                                  <eventparam name="y"></eventparam>
+                                </mutation>
+                                <field name="VAR">y</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_add" id="*BXfX!.@a2;@nC5h4and">
+                                <mutation items="2"></mutation>
+                                <value name="NUM0">
+                                  <block type="lists_select_item" id="7gBxODO):_o4lwlZGX5.">
+                                    <value name="LIST">
+                                      <block type="lists_select_item" id="(FpCd%3T:a0f}WWo[~P#">
+                                        <value name="LIST">
+                                          <block type="lexical_variable_get" id="_k,Tbl;lGNizT8F}kV,#">
+                                            <field name="VAR">lsSinglePos</field>
+                                          </block>
+                                        </value>
+                                        <value name="NUM">
+                                          <block type="lexical_variable_get" id="H||-:Zc?e2YvL*_qeZO*">
+                                            <field name="VAR">i</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="NUM">
+                                      <block type="math_number" id="koI]9W2]KZ5uTee{Ib)`">
+                                        <field name="NUM">2</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="NUM1">
+                                  <block type="math_number" id="vIa[S;7v.i/3q_t25!8.">
+                                    <field name="NUM">1</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
                       </block>
                     </value>
                   </block>
                 </value>
+                <statement name="DO0">
+                  <block type="component_set_get" id="U]/Y{WLdi$$3]{e2WNj.">
+                    <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="tbInput"></mutation>
+                    <field name="COMPONENT_SELECTOR">tbInput</field>
+                    <field name="PROP">Text</field>
+                    <value name="VALUE">
+                      <block type="text_join" id="[xY(Pjrl0)Peq@.YP!;M">
+                        <mutation items="3"></mutation>
+                        <value name="ADD0">
+                          <block type="component_set_get" id="es}l]G{n4R~]aO-|_1HV">
+                            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="tbInput"></mutation>
+                            <field name="COMPONENT_SELECTOR">tbInput</field>
+                            <field name="PROP">Text</field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="lists_select_item" id="f{;j)g|RyJ((N85sTTXq">
+                            <value name="LIST">
+                              <block type="lexical_variable_get" id="]eBM3ZlmK8c*m~l!Bra[">
+                                <field name="VAR">lsSingleTag</field>
+                              </block>
+                            </value>
+                            <value name="NUM">
+                              <block type="lexical_variable_get" id="+B/ao^PBHEMFfTMr.NR}">
+                                <field name="VAR">i</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ADD2">
+                          <block type="text" id="]z]VNAf#q)yS}}}%%ksR">
+                            <field name="TEXT"> </field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
               </block>
             </statement>
           </block>

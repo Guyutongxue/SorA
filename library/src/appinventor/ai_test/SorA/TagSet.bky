@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="global_declaration" id=",h}wqd}hn?GwE;K{:;_(" x="-438" y="-493">
+  <block type="global_declaration" id=",h}wqd}hn?GwE;K{:;_(" x="-439" y="-540">
     <field name="NAME">tag</field>
     <value name="VALUE">
       <block type="lists_create_with" id="sJDzt+`~6=f2-C?p%Y4S">
@@ -7,7 +7,7 @@
       </block>
     </value>
   </block>
-  <block type="global_declaration" id="1{BG4i]:zXtBbDAsuW.$" x="-434" y="-450">
+  <block type="global_declaration" id="1{BG4i]:zXtBbDAsuW.$" x="-413" y="-475">
     <field name="NAME">allTag</field>
     <value name="VALUE">
       <block type="lists_create_with" id="w,fP:Df+Yls?CLjh`l4_">
@@ -15,7 +15,7 @@
       </block>
     </value>
   </block>
-  <block type="global_declaration" id="|#$3UMUhlBLm.0-H${2U" x="-441" y="-401">
+  <block type="global_declaration" id="|#$3UMUhlBLm.0-H${2U" x="-414" y="-429">
     <field name="NAME">currentSubject</field>
     <value name="VALUE">
       <block type="math_number" id="6yAe^=k,:($C$ItfSgqQ">
@@ -23,7 +23,15 @@
       </block>
     </value>
   </block>
-  <block type="component_event" id="wUK{VvhQbR7NL+!CBjO/" x="-478" y="-325">
+  <block type="global_declaration" id="1d$9ykT1u#`ILKr*$qdI" x="-414" y="-381">
+    <field name="NAME">section</field>
+    <value name="VALUE">
+      <block type="math_number" id="UC]sT+72`]}qL0LbT.F9">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" id="wUK{VvhQbR7NL+!CBjO/" x="-414" y="-337">
     <mutation component_type="Form" instance_name="TagSet" event_name="Initialize"></mutation>
     <field name="COMPONENT_SELECTOR">TagSet</field>
     <statement name="DO">
@@ -106,9 +114,21 @@
                           </block>
                         </value>
                         <next>
-                          <block type="procedures_callnoreturn" id="wX!E#x_=t+lvVPD-H+qp" inline="false">
-                            <mutation name="getItems"></mutation>
-                            <field name="PROCNAME">getItems</field>
+                          <block type="component_method" id="G[/zeJi(4`PdT9,vQS5i">
+                            <mutation component_type="RichListView" method_name="Initialize_Scroll" is_generic="false" instance_name="rlvTag"></mutation>
+                            <field name="COMPONENT_SELECTOR">rlvTag</field>
+                            <value name="ARG0">
+                              <block type="component_component_block" id="Z*_R%|S]p$WOq$KEyF9b">
+                                <mutation component_type="VerticalScrollArrangement" instance_name="rlvgTag"></mutation>
+                                <field name="COMPONENT_SELECTOR">rlvgTag</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="procedures_callnoreturn" id="wX!E#x_=t+lvVPD-H+qp" inline="false">
+                                <mutation name="getItems"></mutation>
+                                <field name="PROCNAME">getItems</field>
+                              </block>
+                            </next>
                           </block>
                         </next>
                       </block>
@@ -180,139 +200,48 @@
       </block>
     </statement>
   </block>
-  <block type="procedures_defnoreturn" id="wBi)kp7_?v=y?uyeeNe(" x="269" y="-221">
-    <mutation>
-      <arg name="item"></arg>
-      <arg name="Component"></arg>
-    </mutation>
-    <field name="NAME">addItemsToListView</field>
-    <field name="VAR0">item</field>
-    <field name="VAR1">Component</field>
-    <statement name="STACK">
-      <block type="local_declaration_statement" id="N_$3%6Er!g{$bBrIA8N8">
-        <mutation>
-          <localname name="ls"></localname>
-        </mutation>
-        <field name="VAR0">ls</field>
-        <value name="DECL0">
-          <block type="component_set_get" id="LX!#-i8_xrku=_z_8DE]">
-            <mutation component_type="ListView" set_or_get="get" property_name="Elements" is_generic="true"></mutation>
-            <field name="PROP">Elements</field>
-            <value name="COMPONENT">
-              <block type="lexical_variable_get" id=";m[N,[4bqK.T$6Yw5c%D">
-                <field name="VAR">Component</field>
-              </block>
-            </value>
-          </block>
-        </value>
-        <statement name="STACK">
-          <block type="controls_if" id="s6x]%bzU+joiNUAI,^l$">
-            <mutation else="1"></mutation>
-            <value name="IF0">
-              <block type="lists_is_list" id="M;BP2*G[Kz*mk3jA-T/I">
-                <value name="ITEM">
-                  <block type="lexical_variable_get" id="mPv#SbZsP2m/Yme.{@`3">
-                    <field name="VAR">item</field>
-                  </block>
-                </value>
-              </block>
-            </value>
-            <statement name="DO0">
-              <block type="lists_append_list" id="1HpHU,.?;w(Sm[[yp;+b">
-                <value name="LIST0">
-                  <block type="lexical_variable_get" id="dY3jw{a,U7s(dHS^Fb-`">
-                    <field name="VAR">ls</field>
-                  </block>
-                </value>
-                <value name="LIST1">
-                  <block type="lexical_variable_get" id="9/e]#Y|;xUx!}LqhoF8A">
-                    <field name="VAR">item</field>
-                  </block>
-                </value>
-              </block>
-            </statement>
-            <statement name="ELSE">
-              <block type="lists_add_items" id="#(7{[B?6uF+@_v*x29x|">
-                <mutation items="1"></mutation>
-                <value name="LIST">
-                  <block type="lexical_variable_get" id="_N}cn5A8c7]EFp=YxUeM">
-                    <field name="VAR">ls</field>
-                  </block>
-                </value>
-                <value name="ITEM0">
-                  <block type="lexical_variable_get" id="MitZQXKG;CZLdOl!!HOM">
-                    <field name="VAR">item</field>
-                  </block>
-                </value>
-              </block>
-            </statement>
-            <next>
-              <block type="component_set_get" id="A?yh%V:WHBe#^ut8X,T:">
-                <mutation component_type="ListView" set_or_get="set" property_name="Elements" is_generic="true"></mutation>
-                <field name="PROP">Elements</field>
-                <value name="COMPONENT">
-                  <block type="lexical_variable_get" id="n@J~`;e#/wjt%NY}.j.O">
-                    <field name="VAR">Component</field>
-                  </block>
-                </value>
-                <value name="VALUE">
-                  <block type="lexical_variable_get" id="w@Uci4+.GE47j6-]8@JC">
-                    <field name="VAR">ls</field>
-                  </block>
-                </value>
-              </block>
-            </next>
-          </block>
-        </statement>
-      </block>
-    </statement>
-  </block>
-  <block type="procedures_defnoreturn" id="@CzqR,[a/._J+H2^M{hQ" x="-433" y="59">
+  <block type="procedures_defnoreturn" id="@CzqR,[a/._J+H2^M{hQ" x="-406" y="57">
     <field name="NAME">getItems</field>
     <statement name="STACK">
-      <block type="component_set_get" id="UWhZ$NJZ,d,ibr]48Uf*">
-        <mutation component_type="ListView" set_or_get="set" property_name="Elements" is_generic="false" instance_name="lvTag"></mutation>
-        <field name="COMPONENT_SELECTOR">lvTag</field>
-        <field name="PROP">Elements</field>
-        <value name="VALUE">
-          <block type="lists_create_with" id="Q7%^Y$fE?Y7[2hEh]8/c">
-            <mutation items="0"></mutation>
-          </block>
-        </value>
+      <block type="component_method" id="et4/5lSdCj5]#-6qtxB?">
+        <mutation component_type="RichListView" method_name="Clear" is_generic="false" instance_name="rlvTag"></mutation>
+        <field name="COMPONENT_SELECTOR">rlvTag</field>
         <next>
-          <block type="procedures_callnoreturn" id="oGoR.-)ugl$2]SE(7+;b" inline="false">
-            <mutation name="addItemsToListView">
-              <arg name="item"></arg>
-              <arg name="Component"></arg>
-            </mutation>
-            <field name="PROCNAME">addItemsToListView</field>
-            <value name="ARG0">
+          <block type="controls_forEach" id="Ojrirfs@SD}-sf3%N{fk">
+            <field name="VAR">item</field>
+            <value name="LIST">
               <block type="lexical_variable_get" id="X`nj#c!JU]uW#*6K`l?w">
                 <field name="VAR">global tag</field>
               </block>
             </value>
-            <value name="ARG1">
-              <block type="component_component_block" id="JhN/LtgB#+DdSOPL=!:Q">
-                <mutation component_type="ListView" instance_name="lvTag"></mutation>
-                <field name="COMPONENT_SELECTOR">lvTag</field>
-              </block>
-            </value>
-            <next>
-              <block type="procedures_callnoreturn" id="#t/E1fNeh@z:vcLp!jo!" inline="false">
-                <mutation name="addItemsToListView">
-                  <arg name="item"></arg>
-                  <arg name="Component"></arg>
-                </mutation>
-                <field name="PROCNAME">addItemsToListView</field>
+            <statement name="DO">
+              <block type="component_method" id="Y3j{z24)0`z9HY`b:d,=">
+                <mutation component_type="RichListView" method_name="AddElement" is_generic="false" instance_name="rlvTag"></mutation>
+                <field name="COMPONENT_SELECTOR">rlvTag</field>
                 <value name="ARG0">
-                  <block type="text" id="7qipqXLN[/98xt)hZjo}">
-                    <field name="TEXT">➕ 新建...</field>
+                  <block type="lists_create_with" id="O@HvIf,Q5Pp?ok*@8T}S">
+                    <mutation items="1"></mutation>
+                    <value name="ADD0">
+                      <block type="lexical_variable_get" id="]xG.0g(F#5dJ]T3|LLrR">
+                        <field name="VAR">item</field>
+                      </block>
+                    </value>
                   </block>
                 </value>
-                <value name="ARG1">
-                  <block type="component_component_block" id="CO%az*bNvWiZ5,Gj50Eb">
-                    <mutation component_type="ListView" instance_name="lvTag"></mutation>
-                    <field name="COMPONENT_SELECTOR">lvTag</field>
+              </block>
+            </statement>
+            <next>
+              <block type="component_method" id="UA?oAvf!aUiZf:?jlK}$">
+                <mutation component_type="RichListView" method_name="AddElement" is_generic="false" instance_name="rlvTag"></mutation>
+                <field name="COMPONENT_SELECTOR">rlvTag</field>
+                <value name="ARG0">
+                  <block type="lists_create_with" id="{,Lm(GW0bs:[OxU-+mtY">
+                    <mutation items="1"></mutation>
+                    <value name="ADD0">
+                      <block type="text" id="7qipqXLN[/98xt)hZjo}">
+                        <field name="TEXT">➕ 新建...</field>
+                      </block>
+                    </value>
                   </block>
                 </value>
               </block>
@@ -322,19 +251,80 @@
       </block>
     </statement>
   </block>
-  <block type="component_event" id="dM+CRExfVMCYhDF=3MUn" x="-418" y="291">
-    <mutation component_type="ListView" instance_name="lvTag" event_name="AfterPicking"></mutation>
-    <field name="COMPONENT_SELECTOR">lvTag</field>
+  <block type="component_event" id="@|Xlmm_EG$D|Bpcw~-DW" x="358" y="59">
+    <mutation component_type="RichListView" instance_name="rlvTag" event_name="ElementClick"></mutation>
+    <field name="COMPONENT_SELECTOR">rlvTag</field>
     <statement name="DO">
+      <block type="lexical_variable_set" id="#*4))$4!56P7y!Ap@T|e">
+        <field name="VAR">global section</field>
+        <value name="VALUE">
+          <block type="lexical_variable_get" id="^8%pTVds_:dl.3,,4j!Y">
+            <mutation>
+              <eventparam name="elementIndex"></eventparam>
+            </mutation>
+            <field name="VAR">elementIndex</field>
+          </block>
+        </value>
+        <next>
+          <block type="procedures_callnoreturn" id="FVp(3GtailWIwFcTAvfU" inline="false">
+            <mutation name="itemClick">
+              <arg name="index"></arg>
+            </mutation>
+            <field name="PROCNAME">itemClick</field>
+            <value name="ARG0">
+              <block type="lexical_variable_get" id="y1Vzb.PFe/{JdxjsfBD4">
+                <field name="VAR">global section</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="euA7k)K|4|J=fsmEb^zx" x="362" y="232">
+    <mutation component_type="RichListView" instance_name="rlvTag" event_name="IconClick"></mutation>
+    <field name="COMPONENT_SELECTOR">rlvTag</field>
+    <statement name="DO">
+      <block type="lexical_variable_set" id="~q+Xoe|[vdpZX0V)F5/e">
+        <field name="VAR">global section</field>
+        <value name="VALUE">
+          <block type="lexical_variable_get" id="6Mscg,`gs=`7yw+~r`?r">
+            <mutation>
+              <eventparam name="elementIndex"></eventparam>
+            </mutation>
+            <field name="VAR">elementIndex</field>
+          </block>
+        </value>
+        <next>
+          <block type="procedures_callnoreturn" id="mJzbDBc-X`w|!jWz-B,/" inline="false">
+            <mutation name="itemClick">
+              <arg name="index"></arg>
+            </mutation>
+            <field name="PROCNAME">itemClick</field>
+            <value name="ARG0">
+              <block type="lexical_variable_get" id="@@5n6|@}t|1D}d^1vh[`">
+                <field name="VAR">global section</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="zI~7}d,lxy9u16S}Ue7." x="-409" y="282">
+    <mutation>
+      <arg name="index"></arg>
+    </mutation>
+    <field name="NAME">itemClick</field>
+    <field name="VAR0">index</field>
+    <statement name="STACK">
       <block type="controls_if" id="2-TY1O~hIO_YjBlfO?KV">
         <value name="IF0">
           <block type="logic_compare" id="a3ejVt|8C]K^iPb5#!8v">
             <field name="OP">EQ</field>
             <value name="A">
-              <block type="component_set_get" id="!so~f9]O(sS(!j]f{]1r">
-                <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvTag"></mutation>
-                <field name="COMPONENT_SELECTOR">lvTag</field>
-                <field name="PROP">SelectionIndex</field>
+              <block type="lexical_variable_get" id="B%0k{=?abe-I8PITQBq}">
+                <field name="VAR">index</field>
               </block>
             </value>
             <value name="B">
@@ -402,10 +392,8 @@
                       </block>
                     </value>
                     <value name="NUM">
-                      <block type="component_set_get" id="~HKg#o52Q2%qCxq$-?ER">
-                        <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvTag"></mutation>
-                        <field name="COMPONENT_SELECTOR">lvTag</field>
-                        <field name="PROP">SelectionIndex</field>
+                      <block type="lexical_variable_get" id="%:s(=u0}P13Fqn_j..=z">
+                        <field name="VAR">index</field>
                       </block>
                     </value>
                   </block>
@@ -417,7 +405,7 @@
       </block>
     </statement>
   </block>
-  <block type="component_event" id="#T_A:A.IIsP[Ga=oL?B+" x="538" y="415">
+  <block type="component_event" id="#T_A:A.IIsP[Ga=oL?B+" x="379" y="434">
     <mutation component_type="Spinner" instance_name="spnSubject" event_name="AfterSelecting"></mutation>
     <field name="COMPONENT_SELECTOR">spnSubject</field>
     <statement name="DO">
@@ -451,6 +439,18 @@
               <block type="procedures_callnoreturn" id="Q$+.ry~rn`mTa#niw;_B" inline="false">
                 <mutation name="getItems"></mutation>
                 <field name="PROCNAME">getItems</field>
+                <next>
+                  <block type="component_set_get" id=":k^[iM,11dC@q9Rk1oGP">
+                    <mutation component_type="HorizontalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="divInput"></mutation>
+                    <field name="COMPONENT_SELECTOR">divInput</field>
+                    <field name="PROP">Visible</field>
+                    <value name="VALUE">
+                      <block type="logic_false" id="$OtNEG-7!l/hsy63{95.">
+                        <field name="BOOL">FALSE</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
               </block>
             </next>
           </block>
@@ -469,10 +469,8 @@
           </block>
         </value>
         <value name="NUM">
-          <block type="component_set_get" id=")Ne2/-+-!^K{G*N-euiC">
-            <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvTag"></mutation>
-            <field name="COMPONENT_SELECTOR">lvTag</field>
-            <field name="PROP">SelectionIndex</field>
+          <block type="lexical_variable_get" id="0a1j:i%#T(ys:$_r]v-.">
+            <field name="VAR">global section</field>
           </block>
         </value>
         <value name="ITEM">
@@ -500,23 +498,23 @@
               </block>
             </value>
             <next>
-              <block type="component_set_get" id="@quEBaeG!+p,GZdqZ;PE">
-                <mutation component_type="HorizontalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="divInput"></mutation>
-                <field name="COMPONENT_SELECTOR">divInput</field>
-                <field name="PROP">Visible</field>
-                <value name="VALUE">
-                  <block type="logic_boolean" id="}0(3rO#8A(v1QWAx|7Xe">
-                    <field name="BOOL">FALSE</field>
-                  </block>
-                </value>
+              <block type="procedures_callnoreturn" id="qNoqB]R6!`}p}vhf`3F@" inline="false">
+                <mutation name="getItems"></mutation>
+                <field name="PROCNAME">getItems</field>
                 <next>
-                  <block type="procedures_callnoreturn" id="qNoqB]R6!`}p}vhf`3F@" inline="false">
-                    <mutation name="getItems"></mutation>
-                    <field name="PROCNAME">getItems</field>
+                  <block type="component_method" id="Ue6Wq}0-cci;$HJFtPy/">
+                    <mutation component_type="Form" method_name="HideKeyboard" is_generic="false" instance_name="TagSet"></mutation>
+                    <field name="COMPONENT_SELECTOR">TagSet</field>
                     <next>
-                      <block type="component_method" id="Ue6Wq}0-cci;$HJFtPy/">
-                        <mutation component_type="Form" method_name="HideKeyboard" is_generic="false" instance_name="TagSet"></mutation>
-                        <field name="COMPONENT_SELECTOR">TagSet</field>
+                      <block type="component_set_get" id="@quEBaeG!+p,GZdqZ;PE">
+                        <mutation component_type="HorizontalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="divInput"></mutation>
+                        <field name="COMPONENT_SELECTOR">divInput</field>
+                        <field name="PROP">Visible</field>
+                        <value name="VALUE">
+                          <block type="logic_boolean" id="}0(3rO#8A(v1QWAx|7Xe">
+                            <field name="BOOL">FALSE</field>
+                          </block>
+                        </value>
                       </block>
                     </next>
                   </block>
@@ -528,7 +526,166 @@
       </block>
     </statement>
   </block>
-  <block type="component_event" id="#wmV60][4j}-uf-*Rl)^" x="381" y="700">
+  <block type="component_event" id="WiA]C^#_9R%3N8ne9]6m" x="-429" y="855">
+    <mutation component_type="Button" instance_name="btnUp" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">btnUp</field>
+    <statement name="DO">
+      <block type="controls_if" id="3d/_,NDZugQ*FyIfV*wr">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="v02JEOW*TV#T61ZDlGcY">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="lexical_variable_get" id="FHt0BoyGFZ.h9grcUuKq">
+                <field name="VAR">global section</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="!%TP~!,sW:mpPxW.LV;%">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_method" id="yJ7MF!WzwF_0;F,+;dSq">
+            <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="nDebug"></mutation>
+            <field name="COMPONENT_SELECTOR">nDebug</field>
+            <value name="ARG0">
+              <block type="text" id="a=zY2te[*njEpc$P,|5y">
+                <field name="TEXT">已至顶部。</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="local_declaration_statement" id="MFyZVnlU}mJgh/q^Nj97">
+            <mutation>
+              <localname name="swap"></localname>
+            </mutation>
+            <field name="VAR0">swap</field>
+            <value name="DECL0">
+              <block type="lists_select_item" id="WCs-G3s-.{lG01ska2uW">
+                <value name="LIST">
+                  <block type="lexical_variable_get" id="^YxVIx=b/|`_w3gq{Wlo">
+                    <field name="VAR">global tag</field>
+                  </block>
+                </value>
+                <value name="NUM">
+                  <block type="math_subtract" id=":hu9jr}%bZGDCG?.b)id">
+                    <value name="A">
+                      <block type="lexical_variable_get" id="ekZ#0AnyB]I0]+4oHeGE">
+                        <field name="VAR">global section</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="=5l+WuH5iL`v#%]Z@jK0">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="STACK">
+              <block type="lists_replace_item" id="N*AISn!}.u*Ch:%v7xl=">
+                <value name="LIST">
+                  <block type="lexical_variable_get" id="ym/D0/RI_Bqg~]h@^B$@">
+                    <field name="VAR">global tag</field>
+                  </block>
+                </value>
+                <value name="NUM">
+                  <block type="math_subtract" id="`w^V^8SBoa7xW?.=6n-e">
+                    <value name="A">
+                      <block type="lexical_variable_get" id="tOupoy,~/$KS#S.V,x((">
+                        <field name="VAR">global section</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="=vJZMU!w0s*`utWul3oQ">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="ITEM">
+                  <block type="component_set_get" id="TkSX,M}K15[;srU~+C=t">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="tbInput"></mutation>
+                    <field name="COMPONENT_SELECTOR">tbInput</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="lists_replace_item" id="wgR{F-$sR1$6=Jj#Kqs,">
+                    <value name="LIST">
+                      <block type="lexical_variable_get" id="dlsl1h%*^OLP4zQg-M~s">
+                        <field name="VAR">global tag</field>
+                      </block>
+                    </value>
+                    <value name="NUM">
+                      <block type="lexical_variable_get" id="Q2f2k#Q_^xjnpU3sONC|">
+                        <field name="VAR">global section</field>
+                      </block>
+                    </value>
+                    <value name="ITEM">
+                      <block type="lexical_variable_get" id="pPO!r^e4-cH9df%+Tu{w">
+                        <field name="VAR">swap</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="lists_replace_item" id="L~+cz~gB#Tv7Fkr7BkGw">
+                <value name="LIST">
+                  <block type="lexical_variable_get" id="{yL3A?}7vMI}(PTC/tmU">
+                    <field name="VAR">global allTag</field>
+                  </block>
+                </value>
+                <value name="NUM">
+                  <block type="lexical_variable_get" id="}D!1Eg[/Z=VEbBx9uVF1">
+                    <field name="VAR">global currentSubject</field>
+                  </block>
+                </value>
+                <value name="ITEM">
+                  <block type="lexical_variable_get" id="w=qR@|=(O_T{c@zmm8gn">
+                    <field name="VAR">global tag</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="lexical_variable_set" id="nYgBb5VEgxL$N?Evs.ID">
+                    <field name="VAR">global section</field>
+                    <value name="VALUE">
+                      <block type="math_subtract" id="5s8AOoVCxD2uhi-Z5EF,">
+                        <value name="A">
+                          <block type="lexical_variable_get" id="o3Tvp{I#W7G?u0U(~#Xz">
+                            <field name="VAR">global section</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="k7f^itG39TrJdkyRvVEv">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="procedures_callnoreturn" id="D*tI/;XTS5ETjF^^mTIu" inline="false">
+                        <mutation name="getItems"></mutation>
+                        <field name="PROCNAME">getItems</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="#wmV60][4j}-uf-*Rl)^" x="465" y="864">
     <mutation component_type="Button" instance_name="btnDown" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">btnDown</field>
     <statement name="DO">
@@ -538,10 +695,8 @@
           <block type="logic_compare" id="=kcG+kR$/tRpT)e42IV^">
             <field name="OP">EQ</field>
             <value name="A">
-              <block type="component_set_get" id="Y[/_8YE@uDYnccW[b-0F">
-                <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvTag"></mutation>
-                <field name="COMPONENT_SELECTOR">lvTag</field>
-                <field name="PROP">SelectionIndex</field>
+              <block type="lexical_variable_get" id="QPT(sZoh_6|a}*$W3#La">
+                <field name="VAR">global section</field>
               </block>
             </value>
             <value name="B">
@@ -583,10 +738,8 @@
                   <block type="math_add" id="v@3tGxBe[^AbBUH.P]D}">
                     <mutation items="2"></mutation>
                     <value name="NUM0">
-                      <block type="component_set_get" id="R{focqq}xI#_kgl|:eOf">
-                        <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvTag"></mutation>
-                        <field name="COMPONENT_SELECTOR">lvTag</field>
-                        <field name="PROP">SelectionIndex</field>
+                      <block type="lexical_variable_get" id="URUz.oB6IN`o6In|2{3K">
+                        <field name="VAR">global section</field>
                       </block>
                     </value>
                     <value name="NUM1">
@@ -609,10 +762,8 @@
                   <block type="math_add" id="~80ox-:D`{+JEz9,OW_i">
                     <mutation items="2"></mutation>
                     <value name="NUM0">
-                      <block type="component_set_get" id="h9UZI.K*Am`yo!fL_9pZ">
-                        <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvTag"></mutation>
-                        <field name="COMPONENT_SELECTOR">lvTag</field>
-                        <field name="PROP">SelectionIndex</field>
+                      <block type="lexical_variable_get" id="5un[$9w;D_[kEuw-EJ%c">
+                        <field name="VAR">global section</field>
                       </block>
                     </value>
                     <value name="NUM1">
@@ -637,10 +788,8 @@
                       </block>
                     </value>
                     <value name="NUM">
-                      <block type="component_set_get" id="CNhXz)KcL.6@!Cf1PrpJ">
-                        <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvTag"></mutation>
-                        <field name="COMPONENT_SELECTOR">lvTag</field>
-                        <field name="PROP">SelectionIndex</field>
+                      <block type="lexical_variable_get" id="o@))zL}UftYIhKAlv|qn">
+                        <field name="VAR">global section</field>
                       </block>
                     </value>
                     <value name="ITEM">
@@ -670,18 +819,14 @@
                   </block>
                 </value>
                 <next>
-                  <block type="component_set_get" id="5!z5Oyes.275lcG0IA~}">
-                    <mutation component_type="ListView" set_or_get="set" property_name="SelectionIndex" is_generic="false" instance_name="lvTag"></mutation>
-                    <field name="COMPONENT_SELECTOR">lvTag</field>
-                    <field name="PROP">SelectionIndex</field>
+                  <block type="lexical_variable_set" id="SKiowRmk8!nG1yKM[I#r">
+                    <field name="VAR">global section</field>
                     <value name="VALUE">
                       <block type="math_add" id="1@kKiE$QbDgF/Elze3cm">
                         <mutation items="2"></mutation>
                         <value name="NUM0">
-                          <block type="component_set_get" id="P6Ij*4LdttlDcw(wvW-d">
-                            <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvTag"></mutation>
-                            <field name="COMPONENT_SELECTOR">lvTag</field>
-                            <field name="PROP">SelectionIndex</field>
+                          <block type="lexical_variable_get" id="HgQppdk4RCn*i~02.b3T">
+                            <field name="VAR">global section</field>
                           </block>
                         </value>
                         <value name="NUM1">
@@ -706,178 +851,7 @@
       </block>
     </statement>
   </block>
-  <block type="component_event" id="WiA]C^#_9R%3N8ne9]6m" x="-403" y="828">
-    <mutation component_type="Button" instance_name="btnUp" event_name="Click"></mutation>
-    <field name="COMPONENT_SELECTOR">btnUp</field>
-    <statement name="DO">
-      <block type="controls_if" id="3d/_,NDZugQ*FyIfV*wr">
-        <mutation else="1"></mutation>
-        <value name="IF0">
-          <block type="logic_compare" id="v02JEOW*TV#T61ZDlGcY">
-            <field name="OP">EQ</field>
-            <value name="A">
-              <block type="component_set_get" id="K7}hu~wV9h22Fju-YRg5">
-                <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvTag"></mutation>
-                <field name="COMPONENT_SELECTOR">lvTag</field>
-                <field name="PROP">SelectionIndex</field>
-              </block>
-            </value>
-            <value name="B">
-              <block type="math_number" id="!%TP~!,sW:mpPxW.LV;%">
-                <field name="NUM">1</field>
-              </block>
-            </value>
-          </block>
-        </value>
-        <statement name="DO0">
-          <block type="component_method" id="yJ7MF!WzwF_0;F,+;dSq">
-            <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="nDebug"></mutation>
-            <field name="COMPONENT_SELECTOR">nDebug</field>
-            <value name="ARG0">
-              <block type="text" id="a=zY2te[*njEpc$P,|5y">
-                <field name="TEXT">已至顶部。</field>
-              </block>
-            </value>
-          </block>
-        </statement>
-        <statement name="ELSE">
-          <block type="local_declaration_statement" id="MFyZVnlU}mJgh/q^Nj97">
-            <mutation>
-              <localname name="swap"></localname>
-            </mutation>
-            <field name="VAR0">swap</field>
-            <value name="DECL0">
-              <block type="lists_select_item" id="WCs-G3s-.{lG01ska2uW">
-                <value name="LIST">
-                  <block type="lexical_variable_get" id="^YxVIx=b/|`_w3gq{Wlo">
-                    <field name="VAR">global tag</field>
-                  </block>
-                </value>
-                <value name="NUM">
-                  <block type="math_subtract" id=":hu9jr}%bZGDCG?.b)id">
-                    <value name="A">
-                      <block type="component_set_get" id="**?F,s2~PZ^X^E!$qvr@">
-                        <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvTag"></mutation>
-                        <field name="COMPONENT_SELECTOR">lvTag</field>
-                        <field name="PROP">SelectionIndex</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <block type="math_number" id="=5l+WuH5iL`v#%]Z@jK0">
-                        <field name="NUM">1</field>
-                      </block>
-                    </value>
-                  </block>
-                </value>
-              </block>
-            </value>
-            <statement name="STACK">
-              <block type="lists_replace_item" id="N*AISn!}.u*Ch:%v7xl=">
-                <value name="LIST">
-                  <block type="lexical_variable_get" id="ym/D0/RI_Bqg~]h@^B$@">
-                    <field name="VAR">global tag</field>
-                  </block>
-                </value>
-                <value name="NUM">
-                  <block type="math_subtract" id="`w^V^8SBoa7xW?.=6n-e">
-                    <value name="A">
-                      <block type="component_set_get" id="qTb5soxQ+|D(N1avtk%$">
-                        <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvTag"></mutation>
-                        <field name="COMPONENT_SELECTOR">lvTag</field>
-                        <field name="PROP">SelectionIndex</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <block type="math_number" id="=vJZMU!w0s*`utWul3oQ">
-                        <field name="NUM">1</field>
-                      </block>
-                    </value>
-                  </block>
-                </value>
-                <value name="ITEM">
-                  <block type="component_set_get" id="TkSX,M}K15[;srU~+C=t">
-                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="tbInput"></mutation>
-                    <field name="COMPONENT_SELECTOR">tbInput</field>
-                    <field name="PROP">Text</field>
-                  </block>
-                </value>
-                <next>
-                  <block type="lists_replace_item" id="wgR{F-$sR1$6=Jj#Kqs,">
-                    <value name="LIST">
-                      <block type="lexical_variable_get" id="dlsl1h%*^OLP4zQg-M~s">
-                        <field name="VAR">global tag</field>
-                      </block>
-                    </value>
-                    <value name="NUM">
-                      <block type="component_set_get" id="UPWm~7Y*L/:V,*o_2qP9">
-                        <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvTag"></mutation>
-                        <field name="COMPONENT_SELECTOR">lvTag</field>
-                        <field name="PROP">SelectionIndex</field>
-                      </block>
-                    </value>
-                    <value name="ITEM">
-                      <block type="lexical_variable_get" id="pPO!r^e4-cH9df%+Tu{w">
-                        <field name="VAR">swap</field>
-                      </block>
-                    </value>
-                  </block>
-                </next>
-              </block>
-            </statement>
-            <next>
-              <block type="lists_replace_item" id="L~+cz~gB#Tv7Fkr7BkGw">
-                <value name="LIST">
-                  <block type="lexical_variable_get" id="{yL3A?}7vMI}(PTC/tmU">
-                    <field name="VAR">global allTag</field>
-                  </block>
-                </value>
-                <value name="NUM">
-                  <block type="lexical_variable_get" id="}D!1Eg[/Z=VEbBx9uVF1">
-                    <field name="VAR">global currentSubject</field>
-                  </block>
-                </value>
-                <value name="ITEM">
-                  <block type="lexical_variable_get" id="w=qR@|=(O_T{c@zmm8gn">
-                    <field name="VAR">global tag</field>
-                  </block>
-                </value>
-                <next>
-                  <block type="component_set_get" id="0+5`rKX$v~G5eVDyu#Cg">
-                    <mutation component_type="ListView" set_or_get="set" property_name="SelectionIndex" is_generic="false" instance_name="lvTag"></mutation>
-                    <field name="COMPONENT_SELECTOR">lvTag</field>
-                    <field name="PROP">SelectionIndex</field>
-                    <value name="VALUE">
-                      <block type="math_subtract" id="5s8AOoVCxD2uhi-Z5EF,">
-                        <value name="A">
-                          <block type="component_set_get" id=":^*CeO5Gyc2h_DT%e.or">
-                            <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvTag"></mutation>
-                            <field name="COMPONENT_SELECTOR">lvTag</field>
-                            <field name="PROP">SelectionIndex</field>
-                          </block>
-                        </value>
-                        <value name="B">
-                          <block type="math_number" id="k7f^itG39TrJdkyRvVEv">
-                            <field name="NUM">1</field>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                    <next>
-                      <block type="procedures_callnoreturn" id="D*tI/;XTS5ETjF^^mTIu" inline="false">
-                        <mutation name="getItems"></mutation>
-                        <field name="PROCNAME">getItems</field>
-                      </block>
-                    </next>
-                  </block>
-                </next>
-              </block>
-            </next>
-          </block>
-        </statement>
-      </block>
-    </statement>
-  </block>
-  <block type="component_event" id="qxW{g7RrzSQo$.B88o^(" x="-401" y="1421">
+  <block type="component_event" id="qxW{g7RrzSQo$.B88o^(" x="-430" y="1422">
     <mutation component_type="Button" instance_name="btnDel" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">btnDel</field>
     <statement name="DO">
@@ -888,10 +862,8 @@
           </block>
         </value>
         <value name="INDEX">
-          <block type="component_set_get" id="Pai@XjVXbaBI7^f~NR/^">
-            <mutation component_type="ListView" set_or_get="get" property_name="SelectionIndex" is_generic="false" instance_name="lvTag"></mutation>
-            <field name="COMPONENT_SELECTOR">lvTag</field>
-            <field name="PROP">SelectionIndex</field>
+          <block type="lexical_variable_get" id="A)mon@{L/)r,w(RhfW;~">
+            <field name="VAR">global section</field>
           </block>
         </value>
         <next>
@@ -916,19 +888,19 @@
                 <mutation name="getItems"></mutation>
                 <field name="PROCNAME">getItems</field>
                 <next>
-                  <block type="component_set_get" id="kx.U6E##_gj}_Ij+esG%">
-                    <mutation component_type="HorizontalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="divInput"></mutation>
-                    <field name="COMPONENT_SELECTOR">divInput</field>
-                    <field name="PROP">Visible</field>
-                    <value name="VALUE">
-                      <block type="logic_boolean" id="]UV2xWKM#ZVMuhQ}c2zX">
-                        <field name="BOOL">FALSE</field>
-                      </block>
-                    </value>
+                  <block type="component_method" id="Rc6rw*/4K#TmZR2J7r/)">
+                    <mutation component_type="Form" method_name="HideKeyboard" is_generic="false" instance_name="TagSet"></mutation>
+                    <field name="COMPONENT_SELECTOR">TagSet</field>
                     <next>
-                      <block type="component_method" id="Rc6rw*/4K#TmZR2J7r/)">
-                        <mutation component_type="Form" method_name="HideKeyboard" is_generic="false" instance_name="TagSet"></mutation>
-                        <field name="COMPONENT_SELECTOR">TagSet</field>
+                      <block type="component_set_get" id="kx.U6E##_gj}_Ij+esG%">
+                        <mutation component_type="HorizontalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="divInput"></mutation>
+                        <field name="COMPONENT_SELECTOR">divInput</field>
+                        <field name="PROP">Visible</field>
+                        <value name="VALUE">
+                          <block type="logic_boolean" id="]UV2xWKM#ZVMuhQ}c2zX">
+                            <field name="BOOL">FALSE</field>
+                          </block>
+                        </value>
                       </block>
                     </next>
                   </block>
@@ -940,7 +912,7 @@
       </block>
     </statement>
   </block>
-  <block type="component_event" id="HxZA~Gl}UH/v~sg0T,HT" x="183" y="1528">
+  <block type="component_event" id="HxZA~Gl}UH/v~sg0T,HT" x="473" y="1439">
     <mutation component_type="Button" instance_name="btnDone" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">btnDone</field>
     <statement name="DO">
