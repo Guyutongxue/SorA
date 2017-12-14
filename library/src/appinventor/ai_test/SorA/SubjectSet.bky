@@ -1730,205 +1730,227 @@
     <mutation component_type="Notifier" instance_name="nAdd" event_name="AfterTextInput"></mutation>
     <field name="COMPONENT_SELECTOR">nAdd</field>
     <statement name="DO">
-      <block type="controls_if" id="n=X2v?xFr-O;Ldh/265V">
-        <mutation else="1"></mutation>
+      <block type="controls_if" id="(,Bi98rQX@()job%c7Ad">
         <value name="IF0">
-          <block type="logic_negate" id="Rn2w@$Cs^~X_ppepo.UE">
-            <value name="BOOL">
-              <block type="text_isEmpty" id="w1n|t$NoZh1NIy@WI4Re">
-                <value name="VALUE">
-                  <block type="lexical_variable_get" id="X=nD5ug..`{*=}MI-B`N">
-                    <mutation>
-                      <eventparam name="response"></eventparam>
-                    </mutation>
-                    <field name="VAR">response</field>
-                  </block>
-                </value>
-              </block>
-            </value>
-          </block>
-        </value>
-        <statement name="DO0">
-          <block type="lists_add_items" id="Pv9u-d[kQD$]nEm(TlBa">
-            <mutation items="1"></mutation>
-            <value name="LIST">
-              <block type="lexical_variable_get" id="$6i19s{Jh[VG%ThY2l=Z">
-                <field name="VAR">global subject</field>
-              </block>
-            </value>
-            <value name="ITEM0">
-              <block type="lexical_variable_get" id="}acngDY4~_#HJ0aKfV-b">
+          <block type="logic_compare" id="LV:!Z(!Rj,W)n/:d}wYe">
+            <field name="OP">NEQ</field>
+            <value name="A">
+              <block type="lexical_variable_get" id="w^hw{UWb9Zl+XnxBS@Lb">
                 <mutation>
                   <eventparam name="response"></eventparam>
                 </mutation>
                 <field name="VAR">response</field>
               </block>
             </value>
-            <next>
-              <block type="component_method" id="6mTe5_a#[48LRBTWSI],">
-                <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="DB"></mutation>
-                <field name="COMPONENT_SELECTOR">DB</field>
-                <value name="ARG0">
-                  <block type="text" id="8e;o6@.WqOjjd/J#]uu,">
-                    <field name="TEXT">SUB</field>
+            <value name="B">
+              <block type="text" id=".yy0XI]V.+^=wic$g5/L">
+                <field name="TEXT">取消</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_if" id="n=X2v?xFr-O;Ldh/265V">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_negate" id="Rn2w@$Cs^~X_ppepo.UE">
+                <value name="BOOL">
+                  <block type="text_isEmpty" id="w1n|t$NoZh1NIy@WI4Re">
+                    <value name="VALUE">
+                      <block type="lexical_variable_get" id="X=nD5ug..`{*=}MI-B`N">
+                        <mutation>
+                          <eventparam name="response"></eventparam>
+                        </mutation>
+                        <field name="VAR">response</field>
+                      </block>
+                    </value>
                   </block>
                 </value>
-                <value name="ARG1">
-                  <block type="lexical_variable_get" id="c-unzh-%n_@n}YSSPT#G">
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="lists_add_items" id="Pv9u-d[kQD$]nEm(TlBa">
+                <mutation items="1"></mutation>
+                <value name="LIST">
+                  <block type="lexical_variable_get" id="$6i19s{Jh[VG%ThY2l=Z">
                     <field name="VAR">global subject</field>
                   </block>
                 </value>
-                <next>
-                  <block type="local_declaration_statement" id="ikaA9Aqi{Oql@g0oIaT|">
+                <value name="ITEM0">
+                  <block type="lexical_variable_get" id="}acngDY4~_#HJ0aKfV-b">
                     <mutation>
-                      <localname name="lsTag"></localname>
+                      <eventparam name="response"></eventparam>
                     </mutation>
-                    <field name="VAR0">lsTag</field>
-                    <value name="DECL0">
-                      <block type="component_method" id="L*^)dAjyidb*vmKS_[]L">
-                        <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="DB"></mutation>
-                        <field name="COMPONENT_SELECTOR">DB</field>
-                        <value name="ARG0">
-                          <block type="text" id="Ks/CE{j@`-`{H^2bvuAA">
-                            <field name="TEXT">TAG</field>
-                          </block>
-                        </value>
-                        <value name="ARG1">
-                          <block type="lists_create_with" id="X*S:zNU}xqq+S)TWF:ZZ">
-                            <mutation items="0"></mutation>
-                          </block>
-                        </value>
+                    <field name="VAR">response</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_method" id="6mTe5_a#[48LRBTWSI],">
+                    <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="DB"></mutation>
+                    <field name="COMPONENT_SELECTOR">DB</field>
+                    <value name="ARG0">
+                      <block type="text" id="8e;o6@.WqOjjd/J#]uu,">
+                        <field name="TEXT">SUB</field>
                       </block>
                     </value>
-                    <statement name="STACK">
-                      <block type="lists_add_items" id="3].eq73HXJr_|Ctnto7F">
-                        <mutation items="1"></mutation>
-                        <value name="LIST">
-                          <block type="lexical_variable_get" id="rtsU~8+K{RcH=sKhv],4">
-                            <field name="VAR">lsTag</field>
-                          </block>
-                        </value>
-                        <value name="ITEM0">
-                          <block type="lists_create_with" id="61[Lz?8M*a]4.xU^:i;t">
-                            <mutation items="0"></mutation>
-                          </block>
-                        </value>
-                        <next>
-                          <block type="component_method" id="r_V|vB%%YBgsAk:R?Jj{">
-                            <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="DB"></mutation>
+                    <value name="ARG1">
+                      <block type="lexical_variable_get" id="c-unzh-%n_@n}YSSPT#G">
+                        <field name="VAR">global subject</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="local_declaration_statement" id="ikaA9Aqi{Oql@g0oIaT|">
+                        <mutation>
+                          <localname name="lsTag"></localname>
+                        </mutation>
+                        <field name="VAR0">lsTag</field>
+                        <value name="DECL0">
+                          <block type="component_method" id="L*^)dAjyidb*vmKS_[]L">
+                            <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="DB"></mutation>
                             <field name="COMPONENT_SELECTOR">DB</field>
                             <value name="ARG0">
-                              <block type="text" id="cv.nOeYC#:d|aw?i71uy">
+                              <block type="text" id="Ks/CE{j@`-`{H^2bvuAA">
                                 <field name="TEXT">TAG</field>
                               </block>
                             </value>
                             <value name="ARG1">
-                              <block type="lexical_variable_get" id="6}Fl}kiVWA/)+]9Sm]QO">
-                                <field name="VAR">lsTag</field>
+                              <block type="lists_create_with" id="X*S:zNU}xqq+S)TWF:ZZ">
+                                <mutation items="0"></mutation>
                               </block>
                             </value>
                           </block>
-                        </next>
-                      </block>
-                    </statement>
-                    <next>
-                      <block type="procedures_callnoreturn" id="FWlxZJ(sjA^cS`DJMu9X" inline="false">
-                        <mutation name="getItems"></mutation>
-                        <field name="PROCNAME">getItems</field>
-                        <next>
-                          <block type="controls_forEach" id="b2y;,hh9rsa,QjjbxE}E">
-                            <field name="VAR">i</field>
+                        </value>
+                        <statement name="STACK">
+                          <block type="lists_add_items" id="3].eq73HXJr_|Ctnto7F">
+                            <mutation items="1"></mutation>
                             <value name="LIST">
-                              <block type="component_method" id="_+cE35TE7FAx~mFOv)fL">
-                                <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="DB"></mutation>
+                              <block type="lexical_variable_get" id="rtsU~8+K{RcH=sKhv],4">
+                                <field name="VAR">lsTag</field>
+                              </block>
+                            </value>
+                            <value name="ITEM0">
+                              <block type="lists_create_with" id="61[Lz?8M*a]4.xU^:i;t">
+                                <mutation items="0"></mutation>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="component_method" id="r_V|vB%%YBgsAk:R?Jj{">
+                                <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="DB"></mutation>
                                 <field name="COMPONENT_SELECTOR">DB</field>
                                 <value name="ARG0">
-                                  <block type="text" id="XLL,-8q#l%Scp8C8V]y#">
-                                    <field name="TEXT">DATE</field>
+                                  <block type="text" id="cv.nOeYC#:d|aw?i71uy">
+                                    <field name="TEXT">TAG</field>
                                   </block>
                                 </value>
                                 <value name="ARG1">
-                                  <block type="lists_create_with" id="`;~_go.paWUKoFYi8^Kq">
-                                    <mutation items="0"></mutation>
+                                  <block type="lexical_variable_get" id="6}Fl}kiVWA/)+]9Sm]QO">
+                                    <field name="VAR">lsTag</field>
                                   </block>
                                 </value>
                               </block>
-                            </value>
-                            <statement name="DO">
-                              <block type="local_declaration_statement" id="O]Z^JPY1BHJqzV4)u8!o">
-                                <mutation>
-                                  <localname name="lsHw"></localname>
-                                </mutation>
-                                <field name="VAR0">lsHw</field>
-                                <value name="DECL0">
-                                  <block type="component_method" id="]R?)9Q^G-wBP,2cmvi/t">
+                            </next>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="procedures_callnoreturn" id="FWlxZJ(sjA^cS`DJMu9X" inline="false">
+                            <mutation name="getItems"></mutation>
+                            <field name="PROCNAME">getItems</field>
+                            <next>
+                              <block type="controls_forEach" id="b2y;,hh9rsa,QjjbxE}E">
+                                <field name="VAR">i</field>
+                                <value name="LIST">
+                                  <block type="component_method" id="_+cE35TE7FAx~mFOv)fL">
                                     <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="DB"></mutation>
                                     <field name="COMPONENT_SELECTOR">DB</field>
                                     <value name="ARG0">
-                                      <block type="text_join" id="!f[M^f%KLUXxn_=@EguU">
-                                        <mutation items="2"></mutation>
-                                        <value name="ADD0">
-                                          <block type="text" id="y.O;yI^w8@R;3lA(`JZa">
-                                            <field name="TEXT">VL_</field>
-                                          </block>
-                                        </value>
-                                        <value name="ADD1">
-                                          <block type="lexical_variable_get" id=")HT-,B]4^x1IuH*O$~|]">
-                                            <field name="VAR">i</field>
-                                          </block>
-                                        </value>
+                                      <block type="text" id="XLL,-8q#l%Scp8C8V]y#">
+                                        <field name="TEXT">DATE</field>
                                       </block>
                                     </value>
                                     <value name="ARG1">
-                                      <block type="lists_create_with" id="%RW.fujmqn!v-%z`4.U8">
+                                      <block type="lists_create_with" id="`;~_go.paWUKoFYi8^Kq">
                                         <mutation items="0"></mutation>
                                       </block>
                                     </value>
                                   </block>
                                 </value>
-                                <statement name="STACK">
-                                  <block type="lists_add_items" id="$n3jMeX+C4SCxPxMF_}B">
-                                    <mutation items="1"></mutation>
-                                    <value name="LIST">
-                                      <block type="lexical_variable_get" id="k/olG0ykv0jeNM=*lg?4">
-                                        <field name="VAR">lsHw</field>
-                                      </block>
-                                    </value>
-                                    <value name="ITEM0">
-                                      <block type="lists_create_with" id="ii|o|E;!k}$cak$NLU@~">
-                                        <mutation items="0"></mutation>
-                                      </block>
-                                    </value>
-                                    <next>
-                                      <block type="component_method" id="091kN7w6p{{|:6bB|wv3">
-                                        <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="DB"></mutation>
+                                <statement name="DO">
+                                  <block type="local_declaration_statement" id="O]Z^JPY1BHJqzV4)u8!o">
+                                    <mutation>
+                                      <localname name="lsHw"></localname>
+                                    </mutation>
+                                    <field name="VAR0">lsHw</field>
+                                    <value name="DECL0">
+                                      <block type="component_method" id="]R?)9Q^G-wBP,2cmvi/t">
+                                        <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="DB"></mutation>
                                         <field name="COMPONENT_SELECTOR">DB</field>
                                         <value name="ARG0">
-                                          <block type="text_join" id="~EC5xa8s,L3Oi0+E[LzX">
+                                          <block type="text_join" id="!f[M^f%KLUXxn_=@EguU">
                                             <mutation items="2"></mutation>
                                             <value name="ADD0">
-                                              <block type="text" id="$sC(1T}=snuh3d:Tk#fU">
+                                              <block type="text" id="y.O;yI^w8@R;3lA(`JZa">
                                                 <field name="TEXT">VL_</field>
                                               </block>
                                             </value>
                                             <value name="ADD1">
-                                              <block type="lexical_variable_get" id="+w8Cpg10=|E$.1By9FB=">
+                                              <block type="lexical_variable_get" id=")HT-,B]4^x1IuH*O$~|]">
                                                 <field name="VAR">i</field>
                                               </block>
                                             </value>
                                           </block>
                                         </value>
                                         <value name="ARG1">
-                                          <block type="lexical_variable_get" id="yTF_FtBo8LUI`d.y%*aR">
-                                            <field name="VAR">lsHw</field>
+                                          <block type="lists_create_with" id="%RW.fujmqn!v-%z`4.U8">
+                                            <mutation items="0"></mutation>
                                           </block>
                                         </value>
                                       </block>
-                                    </next>
+                                    </value>
+                                    <statement name="STACK">
+                                      <block type="lists_add_items" id="$n3jMeX+C4SCxPxMF_}B">
+                                        <mutation items="1"></mutation>
+                                        <value name="LIST">
+                                          <block type="lexical_variable_get" id="k/olG0ykv0jeNM=*lg?4">
+                                            <field name="VAR">lsHw</field>
+                                          </block>
+                                        </value>
+                                        <value name="ITEM0">
+                                          <block type="lists_create_with" id="ii|o|E;!k}$cak$NLU@~">
+                                            <mutation items="0"></mutation>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="component_method" id="091kN7w6p{{|:6bB|wv3">
+                                            <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="DB"></mutation>
+                                            <field name="COMPONENT_SELECTOR">DB</field>
+                                            <value name="ARG0">
+                                              <block type="text_join" id="~EC5xa8s,L3Oi0+E[LzX">
+                                                <mutation items="2"></mutation>
+                                                <value name="ADD0">
+                                                  <block type="text" id="$sC(1T}=snuh3d:Tk#fU">
+                                                    <field name="TEXT">VL_</field>
+                                                  </block>
+                                                </value>
+                                                <value name="ADD1">
+                                                  <block type="lexical_variable_get" id="+w8Cpg10=|E$.1By9FB=">
+                                                    <field name="VAR">i</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="ARG1">
+                                              <block type="lexical_variable_get" id="yTF_FtBo8LUI`d.y%*aR">
+                                                <field name="VAR">lsHw</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </statement>
                                   </block>
                                 </statement>
                               </block>
-                            </statement>
+                            </next>
                           </block>
                         </next>
                       </block>
@@ -1936,18 +1958,18 @@
                   </block>
                 </next>
               </block>
-            </next>
-          </block>
-        </statement>
-        <statement name="ELSE">
-          <block type="component_method" id="ur~!*Ou4+,0CWfFdk#hu">
-            <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="nAdd"></mutation>
-            <field name="COMPONENT_SELECTOR">nAdd</field>
-            <value name="ARG0">
-              <block type="text" id="bVMInPJLgu3BILJc9h-c">
-                <field name="TEXT">科目名称不能为空。</field>
+            </statement>
+            <statement name="ELSE">
+              <block type="component_method" id="ur~!*Ou4+,0CWfFdk#hu">
+                <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="nAdd"></mutation>
+                <field name="COMPONENT_SELECTOR">nAdd</field>
+                <value name="ARG0">
+                  <block type="text" id="bVMInPJLgu3BILJc9h-c">
+                    <field name="TEXT">科目名称不能为空。</field>
+                  </block>
+                </value>
               </block>
-            </value>
+            </statement>
           </block>
         </statement>
       </block>
