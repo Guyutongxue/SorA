@@ -1,0 +1,282 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="xolnn[XLc}xb*F|tk,P^" x="-436" y="-309">
+    <mutation component_type="Button" instance_name="btnBack" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">btnBack</field>
+    <statement name="DO">
+      <block type="controls_closeScreen" id="s[(zqU1n@2{4r!;=@28f"></block>
+    </statement>
+  </block>
+  <block type="component_event" id="g1Rfix!HbGCi!G]^5*;y" x="-437" y="-228">
+    <mutation component_type="Form" instance_name="DataPort" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">DataPort</field>
+    <statement name="DO">
+      <block type="component_set_get" id="xirFUo@;%_MC$oB+:|qP">
+        <mutation component_type="Form" set_or_get="set" property_name="BackgroundColor" is_generic="false" instance_name="DataPort"></mutation>
+        <field name="COMPONENT_SELECTOR">DataPort</field>
+        <field name="PROP">BackgroundColor</field>
+        <value name="VALUE">
+          <block type="color_make_color" id="X.FBU!,|M?Ob-s:%kp0}">
+            <value name="COLORLIST">
+              <block type="lists_create_with" id="?NMO%EezT^J]a.dxu|Fy" inline="false">
+                <mutation items="3"></mutation>
+                <value name="ADD0">
+                  <block type="math_number" id="@af:!E?-fCyOYi%S:M!|">
+                    <field name="NUM">227</field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="math_number" id="7)-X3!(~~!U;WWpfOM/T">
+                    <field name="NUM">227</field>
+                  </block>
+                </value>
+                <value name="ADD2">
+                  <block type="math_number" id="e+r%CV};B-e=#li[f{-1">
+                    <field name="NUM">227</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" id="Lutt#h#?G6KnHd^WOWR`">
+            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="lbInstruct"></mutation>
+            <field name="COMPONENT_SELECTOR">lbInstruct</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="text" id="d_E:s+i_!5ZjSOl@=^=u">
+                <field name="TEXT">您可以将数据导出在下方的文本框中，\n或者输入数据到下方的文本框并导入 SorA 。</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="0}u#6i9qfVkK2S|nMi(K" x="-422" y="-24">
+    <mutation component_type="Button" instance_name="btnExport" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">btnExport</field>
+    <statement name="DO">
+      <block type="controls_if" id="Q}Irz-*%Pk`}qt83tsAD">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="component_set_get" id="?ETY4}#!!^]l(ZuGenxo">
+            <mutation component_type="CheckBox" set_or_get="get" property_name="Checked" is_generic="false" instance_name="cbBase64"></mutation>
+            <field name="COMPONENT_SELECTOR">cbBase64</field>
+            <field name="PROP">Checked</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_set_get" id="B*g^*y.N=xeCV1TWMT2C">
+            <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="tbData"></mutation>
+            <field name="COMPONENT_SELECTOR">tbData</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="component_method" id="SF0c5PTGDDd|^neW4?Kz">
+                <mutation component_type="TinyDBConverter" method_name="TinyDBToBase64String" is_generic="false" instance_name="DBC"></mutation>
+                <field name="COMPONENT_SELECTOR">DBC</field>
+                <value name="ARG0">
+                  <block type="component_component_block" id="pQomQA*?*g1,*V;lA5,[">
+                    <mutation component_type="TinyDB" instance_name="DB"></mutation>
+                    <field name="COMPONENT_SELECTOR">DB</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="component_set_get" id="ip=:i}/;Ljgr`qK/IUC$">
+            <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="tbData"></mutation>
+            <field name="COMPONENT_SELECTOR">tbData</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="component_method" id=":Mnh]``LwqjOguRg/rSc">
+                <mutation component_type="TinyDBConverter" method_name="TinyDBToJson" is_generic="false" instance_name="DBC"></mutation>
+                <field name="COMPONENT_SELECTOR">DBC</field>
+                <value name="ARG0">
+                  <block type="component_component_block" id="KdMx)xd2}NY42DR}}ay4">
+                    <mutation component_type="TinyDB" instance_name="DB"></mutation>
+                    <field name="COMPONENT_SELECTOR">DB</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="q%oBLBvDZF{oIe()VS#M" x="-428" y="245">
+    <mutation component_type="Button" instance_name="btnImport" event_name="TouchUp"></mutation>
+    <field name="COMPONENT_SELECTOR">btnImport</field>
+    <statement name="DO">
+      <block type="component_method" id="Uo|/pCdZ8;E=1e.13!bK">
+        <mutation component_type="Notifier" method_name="ShowChooseDialog" is_generic="false" instance_name="nDefault"></mutation>
+        <field name="COMPONENT_SELECTOR">nDefault</field>
+        <value name="ARG0">
+          <block type="text" id="Dba?y%U-Ivh{FF+gNxov">
+            <field name="TEXT">将导入文本框中的数据。如果数据出错，有可能导致程序崩溃。请确保导入数据的完整性。</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="text" id="At8W0U[p2c_4Htsj#:z9">
+            <field name="TEXT">警告</field>
+          </block>
+        </value>
+        <value name="ARG2">
+          <block type="text" id="sY[?R,HFBx3r/RpTS6F1">
+            <field name="TEXT">确认</field>
+          </block>
+        </value>
+        <value name="ARG3">
+          <block type="text" id="h;/saqX|@8FM,GkRXKZl">
+            <field name="TEXT">取消</field>
+          </block>
+        </value>
+        <value name="ARG4">
+          <block type="logic_boolean" id="M:fmN.`a1ROZ}YHb{tlp">
+            <field name="BOOL">FALSE</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="Pq(PSs^QNc2=?j1MPgQQ" x="-427" y="485">
+    <mutation component_type="Notifier" instance_name="nDefault" event_name="AfterChoosing"></mutation>
+    <field name="COMPONENT_SELECTOR">nDefault</field>
+    <statement name="DO">
+      <block type="controls_if" id="IDYdIq@pgkD8a0Dl4Aiz">
+        <value name="IF0">
+          <block type="logic_compare" id="inYEN+,e,kX496T_pkLL">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="lexical_variable_get" id=")OZ-DdCX788PbUr]}f=t">
+                <mutation>
+                  <eventparam name="choice"></eventparam>
+                </mutation>
+                <field name="VAR">choice</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="}(bl98@9yP=p8ji+O.A/">
+                <field name="TEXT">确认</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="local_declaration_statement" id="DC?*8yTrI{aCY(PBt8|$">
+            <mutation>
+              <localname name="data"></localname>
+            </mutation>
+            <field name="VAR0">data</field>
+            <value name="DECL0">
+              <block type="component_set_get" id="7(N@GG}Ais$cXL$gU_aI">
+                <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="tbData"></mutation>
+                <field name="COMPONENT_SELECTOR">tbData</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <statement name="STACK">
+              <block type="controls_if" id="bHdW_R`?N(;_?`hJE3L/">
+                <mutation else="1"></mutation>
+                <value name="IF0">
+                  <block type="logic_compare" id="E21t#q(e3@Q%7H!u6|Is">
+                    <field name="OP">NEQ</field>
+                    <value name="A">
+                      <block type="lexical_variable_get" id="F]lM%SogL_a2_C~wc%Nq">
+                        <field name="VAR">data</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="]Iq~[.ExD`wsq|@r%,p4">
+                        <field name="TEXT"></field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="controls_if" id="{fGD8o2Z3otarJFi7#ru">
+                    <mutation else="1"></mutation>
+                    <value name="IF0">
+                      <block type="text_contains" id="ugpP+_ZjzS9yzL/lM)(S">
+                        <value name="TEXT">
+                          <block type="lexical_variable_get" id="j_c|B(urk80XD$/@}*ob">
+                            <field name="VAR">data</field>
+                          </block>
+                        </value>
+                        <value name="PIECE">
+                          <block type="text" id="4X[%Ej2+mXSXT{X8kI-F">
+                            <field name="TEXT">{</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="component_method" id="5r:o~mM5^c@P@WlF~5|M">
+                        <mutation component_type="TinyDBConverter" method_name="JsonToTinyDB" is_generic="false" instance_name="DBC"></mutation>
+                        <field name="COMPONENT_SELECTOR">DBC</field>
+                        <value name="ARG0">
+                          <block type="lexical_variable_get" id="A]IlS3Fe,roF=e[0wzSo">
+                            <field name="VAR">data</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block type="component_component_block" id="vKUjvM5.NII[MD_gGlTq">
+                            <mutation component_type="TinyDB" instance_name="DB"></mutation>
+                            <field name="COMPONENT_SELECTOR">DB</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block type="component_method" id="eKj7l4(G2-X*v6ow0K)/">
+                        <mutation component_type="TinyDBConverter" method_name="Base64StringToTinyDB" is_generic="false" instance_name="DBC"></mutation>
+                        <field name="COMPONENT_SELECTOR">DBC</field>
+                        <value name="ARG0">
+                          <block type="lexical_variable_get" id="TwB)}pupCuMD#z+0Ll2k">
+                            <field name="VAR">data</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block type="component_component_block" id="0KktdqzhYR=,(;j~30)y">
+                            <mutation component_type="TinyDB" instance_name="DB"></mutation>
+                            <field name="COMPONENT_SELECTOR">DB</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="component_method" id="uKF#:~XuN2un5S,03a0]">
+                        <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="nDefault"></mutation>
+                        <field name="COMPONENT_SELECTOR">nDefault</field>
+                        <value name="ARG0">
+                          <block type="text" id="|i4y2kro1-+u#E$uQzo!">
+                            <field name="TEXT">完毕。</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="component_method" id="2By9pF+/mfL}H6kNwa#e">
+                    <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="nDefault"></mutation>
+                    <field name="COMPONENT_SELECTOR">nDefault</field>
+                    <value name="ARG0">
+                      <block type="text" id="[XSFV`bTT[spZ~%{nST-">
+                        <field name="TEXT">导入数据不能为空。</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="159" language-version="20"></yacodeblocks>
+</xml>

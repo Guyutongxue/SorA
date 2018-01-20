@@ -1,0 +1,67 @@
+[{
+ "methods": [
+  {
+   "deprecated": "false",
+   "description": "Convert Base64ed JSON string to a certain TinyDB. If fails, it'll throw an alert.",
+   "name": "Base64StringToTinyDB",
+   "params": [
+    {
+     "name": "base64String",
+     "type": "text"
+    },
+    {
+     "name": "tinyDB",
+     "type": "component"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "description": "Convert JSON string to a certain TinyDB. If fails, it'll throw an alert.",
+   "name": "JsonToTinyDB",
+   "params": [
+    {
+     "name": "jsonString",
+     "type": "text"
+    },
+    {
+     "name": "tinyDB",
+     "type": "component"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "description": "Convert TinyDB's data to a Base64ed JSON string.",
+   "name": "TinyDBToBase64String",
+   "params": [{
+    "name": "tinyDB",
+    "type": "component"
+   }],
+   "returnType": "text"
+  },
+  {
+   "deprecated": "false",
+   "description": "Convert TinyDB's data to a JSON string.",
+   "name": "TinyDBToJson",
+   "params": [{
+    "name": "tinyDB",
+    "type": "component"
+   }],
+   "returnType": "text"
+  }
+ ],
+ "nonVisible": "true",
+ "events": [],
+ "external": "true",
+ "helpString": "This component can convert TinyDB's data to a JSON string, or convert JSON string to a certain TinyDB.<br/> It can also en/decode from/to Base-64.",
+ "properties": [],
+ "type": "cn.guyutongxue.aix.TinyDBConverter.TinyDBConverter",
+ "showOnPalette": "true",
+ "version": "1",
+ "name": "TinyDBConverter",
+ "helpUrl": "",
+ "iconName": "images/extension.png",
+ "blockProperties": [],
+ "categoryString": "EXTENSION"
+}]

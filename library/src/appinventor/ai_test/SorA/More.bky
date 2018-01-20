@@ -146,6 +146,19 @@
       </block>
     </statement>
   </block>
+  <block type="component_event" id="jadEV-WNt-[I17FnuE^9" x="34" y="278">
+    <mutation component_type="Button" instance_name="btnData" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">btnData</field>
+    <statement name="DO">
+      <block type="controls_openAnotherScreen" id="q@i[|s4QO(^B4-UinMGY">
+        <value name="SCREEN">
+          <block type="text" id="cwdSRRW?#hBpiRF^k@I)">
+            <field name="TEXT">DataPort</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
   <block type="component_event" id="D(Hh:ZVi86Sc$qqR]Mm#" x="-729" y="331">
     <mutation component_type="Notifier" instance_name="nDebug" event_name="AfterTextInput"></mutation>
     <field name="COMPONENT_SELECTOR">nDebug</field>

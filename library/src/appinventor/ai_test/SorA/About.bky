@@ -135,7 +135,7 @@
                         <field name="PROP">Text</field>
                         <value name="VALUE">
                           <block type="text" id="l4,DZMdJZ.qNWDb%B,[.">
-                            <field name="TEXT">SorA\nSorA: a Homework Tracking App\n可记录历史的作业管理工具\n版本 RC_0.6.0.1</field>
+                            <field name="TEXT">SorA\nSorA: a Homework Tracking App\n可记录历史的作业管理工具\n版本 RC_0.6.1</field>
                           </block>
                         </value>
                         <next>
@@ -206,7 +206,7 @@
                             <field name="PROP">Text</field>
                             <value name="VALUE">
                               <block type="text" id="Gn9|Es3GIz6}ei[F4!sd">
-                                <field name="TEXT">SorA Copyright © 2017 Guyutongxue \n本应用程序源码开放于GitHub：https://github.com/Guyutongxue/SorA 。\n关于 GPL 参见 http://www.gnu.org/licenses/gpl-3.0.en.html</field>
+                                <field name="TEXT">SorA Copyright © 2017 - 2018 Guyutongxue \n本应用程序源码开放于GitHub：https://github.com/Guyutongxue/SorA 。\n关于 GPL 参见 http://www.gnu.org/licenses/gpl-3.0.en.html</field>
                               </block>
                             </value>
                           </block>
