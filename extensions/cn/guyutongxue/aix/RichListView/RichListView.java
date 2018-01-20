@@ -1,3 +1,6 @@
+// Released under the Apache License, Version 2.0
+// http://www.apache.org/licenses/LICENSE-2.0
+ 
  package cn.guyutongxue.aix.RichListView;
  
  import android.util.Log;
