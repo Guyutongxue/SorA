@@ -6,7 +6,7 @@
 
 ## Info
 
-SorA ( **S**ora: a h**o**mework T**r**acking **A**pp )
+SorA ( **S**orA: a h**o**mework T**r**acking **A**pp )
 可记录历史的作业管理工具。
 
 本 App 通过 App Inventor 2 制作。
