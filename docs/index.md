@@ -10,7 +10,7 @@ SorA ( **S**orA: a h**o**mework T**r**acking **A**pp) is a tool for command home
 
 This app is made by MIT App Inventor 2.
 
-For anything else, view the [README](../README) or the [GitHub Repo](https://github.com/Guyutongxue/SorA).
+For anything else, view the [GitHub Repo](https://github.com/Guyutongxue/SorA).
 
 ---
 
