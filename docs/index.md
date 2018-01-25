@@ -2,6 +2,8 @@
 
 ### A Homeworking Tracking App
 
+[View log](./log)
+
 ## Info
 
 SorA ( **S**ora: a h**o**mework T**r**acking **A**pp )

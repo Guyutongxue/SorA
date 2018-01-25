@@ -135,7 +135,7 @@
                         <field name="PROP">Text</field>
                         <value name="VALUE">
                           <block type="text" id="l4,DZMdJZ.qNWDb%B,[.">
-                            <field name="TEXT">SorA\nSorA: a Homework Tracking App\n可记录历史的作业管理工具\n版本 RC_0.6.1</field>
+                            <field name="TEXT">SorA\nSorA: a Homework Tracking App\n可记录历史的作业管理工具\n版本 RC_0.6.1.1</field>
                           </block>
                         </value>
                         <next>
@@ -270,7 +270,7 @@
                                 <field name="COMPONENT_SELECTOR">wvMain</field>
                                 <value name="ARG0">
                                   <block type="text" id="l22oBT]3Js^Z_;)TF-|5">
-                                    <field name="TEXT">https://guyutongxue.github.io/SorA/log.html</field>
+                                    <field name="TEXT">https://guyutongxue.github.io/SorA/log</field>
                                   </block>
                                 </value>
                               </block>
