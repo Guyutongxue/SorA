@@ -6,26 +6,15 @@
 
 ## Info
 
-SorA ( **S**orA: a h**o**mework T**r**acking **A**pp )
-可记录历史的作业管理工具。
+SorA ( **S**orA: a h**o**mework T**r**acking **A**pp) is a tool for command homeworks which can record history.
 
-本 App 通过 App Inventor 2 制作。
+This app is made by MIT App Inventor 2.
 
-目前共三个页面：
+For anything else, view the [README](../README) or the [GitHub Repo](https://github.com/Guyutongxue/SorA).
 
-1. 今日：用于添加、查看、修改、标记今日作业
-2. 历史：会看过去的作业
-3. 更多：加载设置项和关于界面
+---
 
-## Pack and Export
+This app released under GNU General Public License v3.0.
 
-Linux 环境，需要安装 zip 。
-
-将本 Git `clone` 到本地后，执行：
-
-```
-$ cd library
-$ zip -r SorA.aia ./*
-```
-之后在 App Inventor 2 中导入生成的 `SorA.aia`即可。
+SorA Copyright (C) 2017-2018 Guyutongxue
 
