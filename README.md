@@ -2,7 +2,7 @@
 
 ### A Homeworking Tracking App
 
-[View log](./docs/log)
+[View log](https://github.com/Guyutongxue/SorA/blob/master/docs/log.md)
 
 ## Info
 
