@@ -2317,8 +2317,18 @@
                   </block>
                 </value>
                 <value name="STARTVALUE">
-                  <block type="lexical_variable_get" id="2z`,~V6;^*kR/9GQ~Uxn">
-                    <field name="VAR">global pickedDate</field>
+                  <block type="lists_create_with" id="$+x~~+gY`[]AHzUkK@o@">
+                    <mutation items="2"></mutation>
+                    <value name="ADD0">
+                      <block type="lexical_variable_get" id="2z`,~V6;^*kR/9GQ~Uxn">
+                        <field name="VAR">global pickedDate</field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="math_number" id="{9;$O-5=kU]$|#nu(WNH">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
                   </block>
                 </value>
               </block>

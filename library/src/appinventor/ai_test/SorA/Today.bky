@@ -220,29 +220,41 @@
                                   </block>
                                 </value>
                                 <next>
-                                  <block type="component_set_get" id="A[Dr7;,lHS+F:B9kFbL]">
-                                    <mutation component_type="VerticalScrollArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="rlvgHomework"></mutation>
-                                    <field name="COMPONENT_SELECTOR">rlvgHomework</field>
+                                  <block type="component_set_get" id="tK~szOVIeEw)F3:1)-PF">
+                                    <mutation component_type="Canvas" set_or_get="set" property_name="Visible" is_generic="false" instance_name="cvPercent"></mutation>
+                                    <field name="COMPONENT_SELECTOR">cvPercent</field>
                                     <field name="PROP">Visible</field>
                                     <value name="VALUE">
-                                      <block type="logic_false" id="2#Wm86sjO8%b[[%9Vwr}">
+                                      <block type="logic_false" id="Q)X:0DipM5_4*X:?6Rs!">
                                         <field name="BOOL">TRUE</field>
                                       </block>
                                     </value>
                                     <next>
-                                      <block type="component_method" id="||MrbJ.s@Y+tZPM!uy%8">
-                                        <mutation component_type="RichListView" method_name="Initialize_Scroll" is_generic="false" instance_name="rlvHomework"></mutation>
-                                        <field name="COMPONENT_SELECTOR">rlvHomework</field>
-                                        <value name="ARG0">
-                                          <block type="component_component_block" id="nOnBCHTSuE,*TiDVE`mz">
-                                            <mutation component_type="VerticalScrollArrangement" instance_name="rlvgHomework"></mutation>
-                                            <field name="COMPONENT_SELECTOR">rlvgHomework</field>
+                                      <block type="component_set_get" id="A[Dr7;,lHS+F:B9kFbL]">
+                                        <mutation component_type="VerticalScrollArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="rlvgHomework"></mutation>
+                                        <field name="COMPONENT_SELECTOR">rlvgHomework</field>
+                                        <field name="PROP">Visible</field>
+                                        <value name="VALUE">
+                                          <block type="logic_false" id="2#Wm86sjO8%b[[%9Vwr}">
+                                            <field name="BOOL">TRUE</field>
                                           </block>
                                         </value>
                                         <next>
-                                          <block type="procedures_callnoreturn" id="Uf5ctQ9e;ln%Zzk]rdp_" inline="false">
-                                            <mutation name="getItems"></mutation>
-                                            <field name="PROCNAME">getItems</field>
+                                          <block type="component_method" id="||MrbJ.s@Y+tZPM!uy%8">
+                                            <mutation component_type="RichListView" method_name="Initialize_Scroll" is_generic="false" instance_name="rlvHomework"></mutation>
+                                            <field name="COMPONENT_SELECTOR">rlvHomework</field>
+                                            <value name="ARG0">
+                                              <block type="component_component_block" id="nOnBCHTSuE,*TiDVE`mz">
+                                                <mutation component_type="VerticalScrollArrangement" instance_name="rlvgHomework"></mutation>
+                                                <field name="COMPONENT_SELECTOR">rlvgHomework</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="procedures_callnoreturn" id="Uf5ctQ9e;ln%Zzk]rdp_" inline="false">
+                                                <mutation name="getItems"></mutation>
+                                                <field name="PROCNAME">getItems</field>
+                                              </block>
+                                            </next>
                                           </block>
                                         </next>
                                       </block>
