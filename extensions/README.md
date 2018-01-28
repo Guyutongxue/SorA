@@ -4,7 +4,7 @@ Extensions here released under the **Apache License 2.0**.
 
 ## Build
 
-To build these extensions, you need to clone [the source of App Inventor 2](https://github.com/mit-cml/appinventor-source) .Then you need to install **Apache-Ant** (<=1.9.9) and [**JDK** (7)](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html) .
+To build these extensions, you need to clone [the source of App Inventor 2](https://github.com/mit-cml/appinventor-sources) .Then you need to install **Apache-Ant** (<=1.9.9) and [**JDK** (7)](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html) .
 
 Change working directory to the Git repo. Run the command below:
 
